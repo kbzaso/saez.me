@@ -1,5 +1,5 @@
 <script>
-	import Logo from '../../static/logo.svg';
+	import Logo from '/logo.svg';
 </script>
 
 <div class="navbar mb-2 pt-6 text-neutral-content">
