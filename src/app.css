@@ -2,3 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1,h2,h3,h4,h5,h6,p,span{
+    @apply selection:bg-fuchsia-300 selection:text-fuchsia-900
+}
+
+h2{
+    @apply text-3xl font-extrabold mb-8 text-neutral-content
+}

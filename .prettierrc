@@ -5,5 +5,7 @@
 	"trailingComma": "es5",
 	"printWidth": 70,
 	"arrowParens": "avoid",
-	"proseWrap": "always"
+	"proseWrap": "always",
+	"quoteProps": true,
+	"html.format.wrapLineLength": 99999,
 }

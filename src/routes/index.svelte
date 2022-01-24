@@ -8,6 +8,12 @@
 				homes {
 					description
 					title
+					profile {
+						url
+					}
+					logo {
+						url
+					}
 				}
 			}
 		`;
@@ -25,10 +31,15 @@
 
 <script>
 	export let homes;
-	const { title, description } = homes[0];
 	import Hero from '../components/Hero.svelte';
 </script>
 
-<Hero />
-<h1>{title}</h1>
+<head>
+	
+	<title>Alejandro Sáez | Frontend Dev, UX/UI, Multimedia Designer</title>
+</head>
+
+<Hero bind:homes />
+<!-- <h1>{title}</h1>
 <p>{description}</p>
+<img src={profile.url} alt="" /> -->

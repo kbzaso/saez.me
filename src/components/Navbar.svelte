@@ -1,18 +1,19 @@
-<div class="navbar mb-2 text-neutral-content bg-neutral">
+<script>
+	import Logo from '../../static/logo.svg';
+</script>
+
+<div class="navbar mb-2 pt-6 text-neutral-content">
 	<div class="flex-1 px-2 mx-2">
-		<span class="text-lg font-bold"> Logotipo </span>
+		<a href="/"><img src={Logo} alt="Logotipo Alejandor Sáez" class="w-16" /></a>
 	</div>
-	<div class="flex-none hidden px-2 mx-2 lg:flex">
-		<div class="flex items-stretch">
-			<a href="" class="btn btn-ghost btn-sm rounded-btn"> Likes </a>
-			<a href="" class="btn btn-ghost btn-sm rounded-btn">
-				Notifications
-			</a>
-			<a href="" class="btn btn-ghost btn-sm rounded-btn"> Files </a>
-			<a href="" class="btn btn-ghost btn-sm rounded-btn"> Config </a>
+	<div class="flex-none px-2 mx-2 ">
+		<div class="flex items-stretch gap-4">
+			<button type="button" class="btn btn-outline btn-accent transition ease-in-out btn-sm rounded-btn hover:shadow-lg hover:shadow-cyan-500/50" data-tally-open="wLo013" data-tally-overlay="1" data-tally-emoji-text="🚀" data-tally-emoji-animation="wave" data-tally-auto-close="5000">
+				Contact Me 
+			</button>
 		</div>
 	</div>
-	<div class="flex-none">
+	<div class="flex-none hidden">
 		<button class="btn btn-square btn-ghost">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
