@@ -14,6 +14,9 @@ const config = {
 				},
 			},
 		},
+		fontFamily: {
+			'font-ibm': ['"IBM Plex Sans"', 'sans-serif']
+		},
 	},
 
 	plugins: [require('@tailwindcss/typography'), require('daisyui')],

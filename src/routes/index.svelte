@@ -35,11 +35,8 @@
 </script>
 
 <head>
-	
 	<title>Alejandro Sáez | Frontend Dev, UX/UI, Multimedia Designer</title>
 </head>
 
 <Hero bind:homes />
-<!-- <h1>{title}</h1>
-<p>{description}</p>
-<img src={profile.url} alt="" /> -->
+

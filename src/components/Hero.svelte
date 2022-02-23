@@ -12,14 +12,14 @@
 		<div
 			class="lg:flex-grow md:w-1/2 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
 		>
-			<h1 class="text-4xl font-extrabold mb-8 text-neutral-content bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 text-left">
+			<h1 class="leading-10 italic text-4xl font-extrabold mb-4 text-neutral-content pb-1 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 text-left">
 			 {title}
 			</h1>
 			<!-- <span class="">🖐</span> -->
 			<p class="leading-relaxed text-lg text-neutral-content text-left">
 				{description}
 			</p>
-			<div class="flex gap-4">
+			<div class="flex gap-4 ">
 				<Socialbox/>
 				<Cv/>
 			</div>
