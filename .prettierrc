@@ -6,6 +6,5 @@
 	"printWidth": 70,
 	"arrowParens": "avoid",
 	"proseWrap": "always",
-	"quoteProps": true,
 	"html.format.wrapLineLength": 99999,
 }

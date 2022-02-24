@@ -1,33 +1,80 @@
 <script>
-	import Logo from '../../static/logo.svg';
+	import { page, url } from '$app/stores';
 </script>
 
 <div class="navbar mb-2 pt-6 text-neutral-content">
-	<div class="flex-1 px-2 mx-2">
-		<a href="/"><img src={Logo} alt="Logotipo Alejandor Sáez" class="w-16" /></a>
+	<div class="mx-2 flex-1 px-2">
+		<div
+			class={$page.url.pathname !== '/'
+				? 'tooltip tooltip-bottom'
+				: ''}
+			data-tip="Back to home 🤚">
+			<a
+				href="/"
+				class="btn border-0 bg-transparent hover:bg-transparent">
+				<svg
+					class="h-16"
+					viewBox="0 0 661 868"
+					version="1.1"
+					xmlns="http://www.w3.org/2000/svg"
+					><path
+						d="M440.921,206.441c-32.422,26.099 -62.92,166.442 -42.458,204.865c30.595,-62.807 45.947,-128.889 65.496,-192.315c-8.984,-4.892 -15.93,-8.677 -23.038,-12.55m-346.22,371.619c46.133,-65.302 51.208,-165.197 56.334,-247.307c-39.849,74.128 -85.724,161.073 -56.334,247.307m202.553,-516.515c-25.8,41.988 -49.339,85.356 -73.368,128.375c-13.735,109.967 25.965,226.723 -12.562,335.825c-21.381,101.011 -151.277,181.01 -162.913,29.147c-1.339,-99.171 46.06,-192.052 91.829,-277.533c22.165,-38.265 13.622,-80.545 21.429,-124.721c-95.743,116.44 -139.911,247.707 -147.395,392.187c-13.031,-19.594 -12.348,-48.127 -13.747,-70.878c1.763,-145.179 89.201,-259.885 174.683,-369.451c9.125,-15.712 51.134,-90.807 59.039,-39.705c-3.154,21.3 -7.792,42.381 -9.813,64.465c12.772,-14.661 106.417,-174.585 117.519,-115.203c1.929,62.706 1.343,124.409 -5.328,186.938c23.062,-40.845 47.673,-80.949 72.749,-120.577c49.582,-64.986 123.31,-67.21 131.744,27.102c2.515,36.154 3.509,72.438 4.172,108.681c0.308,23.038 37.097,21.91 53.609,29.835c17.588,3.679 30.162,-21.292 48.045,-10.626c11.637,6.514 14.415,17.9 13.707,30.288c-5.737,60.317 -83.763,64.974 -128.606,44.867c-18.587,57.22 -43.901,121.612 -101.149,149.854c-131.303,44.576 -55.323,-225.817 -12.231,-272.023c17.026,-20.564 28.549,-21.696 53.245,-7.771c3.55,-30.708 32.249,-148.192 -27.166,-96.871c-174.582,182.914 -146.097,464.123 -113.311,695.087c1.257,28.161 22.06,78.645 -16.545,88.312c-26.495,4.593 -34.149,-26.604 -40.064,-46.521c-75.171,-248.617 -19.043,-511.918 22.428,-759.083"
+						style="fill:#fff;fill-rule:nonzero;" /></svg>
+			</a>
+		</div>
 	</div>
-	<div class="flex-none px-2 mx-2 ">
-		<div class="flex items-stretch gap-4">
-			<button type="button" class="btn btn-outline btn-accent transition ease-in-out btn-sm rounded-btn hover:shadow-lg hover:shadow-cyan-500/50" data-tally-open="wLo013" data-tally-overlay="1" data-tally-emoji-text="🚀" data-tally-emoji-animation="wave" data-tally-auto-close="5000">
-				Contact Me 
+	<div class="mx-2 px-2">
+		<div class="hidden lg:flex lg:items-stretch lg:gap-4">
+			<a
+				href="/about-me"
+				class="{$page.url.pathname === '/about-me'
+					? 'bg-accent text-neutral hover:text-white'
+					: 'btn-outline'} btn btn-accent rounded-btn btn-sm transition ease-in-out hover:shadow-lg hover:shadow-cyan-500/50">
+				About me
+			</a>
+			<a
+				href="/projects"
+				type="button"
+				class="{$page.url.pathname === '/projects'
+					? 'bg-accent text-neutral hover:text-white'
+					: 'btn-outline'} btn btn-accent rounded-btn btn-sm transition ease-in-out hover:shadow-lg hover:shadow-cyan-500/50">
+				Projects
+			</a>
+
+			<div class="dropdown">
+				<span
+					tabindex="0"
+					class="{$page.url.pathname.includes('/blog') ||
+					$page.url.pathname.includes('/journal')
+						? 'bg-accent text-neutral hover:text-white'
+						: 'btn-outline'} btn btn-accent rounded-btn btn-sm transition ease-in-out hover:shadow-lg hover:shadow-cyan-500/50"
+					>Writing</span>
+				<ul
+					tabindex="0"
+					class="dropdown-content menu rounded-box mt-4 w-52 bg-secondary p-2 shadow">
+					<li><a href="/blog">Blog</a></li>
+					<li><a href="/journal">Journal</a></li>
+				</ul>
+			</div>
+
+			<button
+				type="button"
+				class="btn-outline btn btn-accent rounded-btn btn-sm transition ease-in-out hover:shadow-lg hover:shadow-cyan-500/50"
+				data-tally-open="wLo013"
+				data-tally-overlay="1"
+				data-tally-emoji-text="🚀"
+				data-tally-emoji-animation="wave"
+				data-tally-auto-close="5000">
+				Contact Me
 			</button>
 		</div>
 	</div>
-	<div class="flex-none hidden">
-		<button class="btn btn-square btn-ghost">
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				viewBox="0 0 24 24"
-				class="inline-block w-6 h-6 stroke-current"
-			>
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					d="M4 6h16M4 12h16M4 18h16"
-				/>
-			</svg>
-		</button>
-	</div>
+	<!-- HAMBURGER MENU -->
+	<a
+		href="#"
+		class="flex flex-col space-y-2 rounded-full bg-secondary p-4 lg:hidden">
+		<span class="block h-0.5 w-6 bg-white" />
+		<span class="block h-0.5 w-6 bg-white" />
+		<span class="block h-0.5 w-6 bg-white" />
+	</a>
 </div>

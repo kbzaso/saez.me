@@ -15,6 +15,14 @@ h1,h2,h3,h4,h5,h6,p,span{
     @apply selection:bg-fuchsia-300 selection:text-fuchsia-900
 }
 
+.title {
+    @apply leading-10 italic text-4xl font-extrabold mb-4 text-neutral-content pb-1 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 text-left
+}
+
+.contenedor {
+    @apply container mx-auto px-5 xl:px-32 lg:px-4 md:px-6 md:py-12 sm:py-4
+}
+
 h2{
     @apply text-3xl font-extrabold mb-8 text-neutral-content
 }
