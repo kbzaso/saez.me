@@ -1,5 +1,10 @@
 <script>
-	import { page, url } from '$app/stores';
+	import { page } from '$app/stores';
+	import FaCaretDown from 'svelte-icons/fa/FaCaretDown.svelte';
+	import FaPencilAlt from 'svelte-icons/fa/FaPencilAlt.svelte';
+	import DiJsBadge from 'svelte-icons/di/DiJsBadge.svelte';
+	import FaFilm from 'svelte-icons/fa/FaFilm.svelte';
+	export let pages;
 </script>
 
 <div class="navbar mb-2 pt-6 text-neutral-content">
@@ -25,23 +30,45 @@
 	</div>
 	<div class="mx-2 px-2">
 		<div class="hidden lg:flex lg:items-stretch lg:gap-4">
-			<a
-				href="/about-me"
-				class="{$page.url.pathname === '/about-me'
-					? 'bg-accent text-neutral hover:text-white'
-					: 'btn-outline'} btn btn-accent rounded-btn btn-sm transition ease-in-out hover:shadow-lg hover:shadow-cyan-500/50">
-				About me
-			</a>
-			<a
-				href="/projects"
-				type="button"
-				class="{$page.url.pathname === '/projects'
-					? 'bg-accent text-neutral hover:text-white'
-					: 'btn-outline'} btn btn-accent rounded-btn btn-sm transition ease-in-out hover:shadow-lg hover:shadow-cyan-500/50">
-				Projects
-			</a>
+			{#each pages as { title, slug }}
+				<a
+					href={`/${slug}`}
+					class="{$page.url.pathname === `/${slug}`
+						? 'bg-accent text-neutral hover:text-white'
+						: 'btn-outline'} btn btn-accent rounded-btn btn-sm transition ease-in-out hover:shadow-lg hover:shadow-cyan-500/50">
+					{title}
+				</a>
+			{/each}
 
 			<div class="dropdown">
+				<span
+					tabindex="0"
+					class="{$page.url.pathname.includes('/development') ||
+					$page.url.pathname.includes('/design') ||
+					$page.url.pathname.includes('/audiovisual')
+						? 'bg-accent text-neutral hover:text-white'
+						: 'btn-outline'} btn btn-accent rounded-btn btn-sm transition ease-in-out hover:shadow-lg hover:shadow-cyan-500/50">
+					<span class="mr-2 w-4"><FaCaretDown /></span> Projects</span>
+				<ul
+					tabindex="0"
+					class="dropdown-content menu rounded-box mt-4 w-52 bg-neutral p-2 shadow">
+					<li>
+						<a href="/development">
+							<span class="mr-2 w-4"><DiJsBadge /></span> Development</a>
+					</li>
+					<li>
+						<a href="/design">
+							<span class="mr-2 w-4"><FaPencilAlt /></span>Graphic
+							Design</a>
+					</li>
+					<li>
+						<a href="/audiovisual"
+							><span class="mr-2 w-4"><FaFilm /></span>Audiovisual</a>
+					</li>
+				</ul>
+			</div>
+			<!-- DROPDOWN WRITING -->
+			<!-- <div class="dropdown">
 				<span
 					tabindex="0"
 					class="{$page.url.pathname.includes('/blog') ||
@@ -55,7 +82,7 @@
 					<li><a href="/blog">Blog</a></li>
 					<li><a href="/journal">Journal</a></li>
 				</ul>
-			</div>
+			</div> -->
 
 			<button
 				type="button"
@@ -78,3 +105,9 @@
 		<span class="block h-0.5 w-6 bg-white" />
 	</a>
 </div>
+
+<style>
+	svg {
+		width: auto;
+	}
+</style>

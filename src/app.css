@@ -6,23 +6,38 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        font-family: 'IBM Plex Sans', sans-serif;
-    }
-  }
+	html {
+		font-family: 'IBM Plex Sans', sans-serif;
+	}
+}
 
-h1,h2,h3,h4,h5,h6,p,span{
-    @apply selection:bg-fuchsia-300 selection:text-fuchsia-900
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+	@apply selection:bg-fuchsia-300 selection:text-fuchsia-900;
 }
 
 .title {
-    @apply leading-10 italic text-4xl font-extrabold mb-4 text-neutral-content pb-1 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 text-left
+	@apply bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text pb-1 text-left text-4xl font-extrabold italic leading-10 text-neutral-content text-transparent;
 }
 
 .contenedor {
-    @apply container mx-auto px-5 xl:px-32 lg:px-4 md:px-6 md:py-12 sm:py-4
+	@apply container mx-auto px-5 sm:py-4 md:px-6 md:py-12 lg:px-4 xl:px-32;
 }
 
-h2{
-    @apply text-3xl font-extrabold mb-8 text-neutral-content
+h2 {
+	@apply mb-8 text-3xl font-extrabold text-neutral-content;
+}
+
+.paragraph {
+	@apply prose text-left text-lg leading-relaxed text-neutral-content;
+}
+
+u {
+	@apply underline decoration-secondary decoration-wavy decoration-1 underline-offset-4;
 }
