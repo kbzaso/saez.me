@@ -16,12 +16,13 @@
 
 <script>
 	import Works from '../../components/Works.svelte';
+	import Breadcrums from '../../components/Breadcrums.svelte';
 	export let projects;
 	export let section;
 </script>
 
 <section class="contenedor">
-	<h3 class="title">My design projects</h3>
+	<Breadcrums />
 
 	<div
 		class="mt-4 grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-8">

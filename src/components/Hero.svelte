@@ -1,6 +1,5 @@
 <script>
-	export let homes;
-	const { title, description, profile } = homes[0];
+	export let src;
 	import Socialbox from './Socialbox.svelte';
 	import Cv from './Cv.svelte';
 </script>
@@ -12,10 +11,23 @@
 			class="mb-16 flex flex-col items-center text-center md:mb-0 md:w-1/2 md:items-start md:text-left lg:flex-grow">
 			<h1
 				class="mb-4 bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text pb-1 text-left text-4xl font-extrabold italic leading-10 text-neutral-content text-transparent">
-				{title}
+				Hi! I'm Alejandro Sáez - a frontend developer, UX/UI and
+				multimedia designer.
 			</h1>
 			<p class="paragraph">
-				{description}
+				I'm in love with design and how it affects every aspect of
+				life, I like tech and creating digital products. I'm a
+				photography enthusiast too.
+
+				<!-- <span
+					and before starting the tech journey
+					class="tooltip-top tooltip"
+					data-tip="Let's go to about-me page ⚡️">
+					<a href="/about-me">I was a professional wrestler.</a>
+				</span> -->
+			</p>
+			<p class="paragraph mt-4 w-full">
+				🧠 Welcome to my digital mind space.
 			</p>
 			<div class="flex w-full gap-4">
 				<Socialbox />
@@ -24,11 +36,11 @@
 		</div>
 
 		<div
-			class="mask  mask-hexagon order-first my-0 w-5/6 rotate-6 bg-universe bg-cover md:order-last md:w-1/2 lg:my-0 lg:w-full lg:max-w-lg">
+			class="mask mask-squircle order-first my-0 w-5/6 bg-universe bg-cover md:order-last md:w-1/2 lg:my-0 lg:w-full lg:max-w-lg">
 			<img
 				class="object-cover object-center"
 				alt="Profile of Alejandro"
-				src={profile.url} />
+				{src} />
 		</div>
 	</div>
 </section>

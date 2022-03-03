@@ -17,14 +17,15 @@
 </script>
 
 <script>
+	import Breadcrums from '../../components/Breadcrums.svelte';
 	export let projects;
 </script>
 
 <article class="contenedor">
+	<Breadcrums />
 	{#each projects as { name, content }}
-		<div
-			class="prose  mx-auto max-w-prose text-left text-neutral-content prose-a:text-secondary prose-a:decoration-cyan-500 prose-a:decoration-solid prose-a:decoration-2 dark:prose-invert md:prose-lg lg:prose-xl">
-			<h3 class="title">
+		<div class="lectura mx-auto max-w-prose">
+			<h3 class="text-4xl italic text-base-content">
 				{name}
 			</h3>
 

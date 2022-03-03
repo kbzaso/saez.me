@@ -23,8 +23,8 @@
 <article class="contenedor">
 	{#each pages as { title, content }}
 		<div
-			class="prose my-6 mx-auto max-w-prose text-left text-neutral-content prose-a:text-secondary prose-a:decoration-cyan-500 prose-a:decoration-solid prose-a:decoration-2 dark:prose-invert md:prose-lg lg:prose-xl">
-			<h3 class="title">
+			class="prose mx-auto max-w-prose text-left prose-a:text-secondary prose-a:decoration-cyan-500 prose-a:decoration-solid prose-a:decoration-2 md:prose-lg lg:prose-xl">
+			<h3 class="text-4xl italic text-base-content">
 				{title}
 			</h3>
 			{@html content.html}

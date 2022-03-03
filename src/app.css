@@ -23,7 +23,7 @@ span {
 }
 
 .title {
-	@apply bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text pb-1 text-left text-4xl font-extrabold italic leading-10 text-neutral-content text-transparent;
+	@apply bg-gradient-to-r from-primary to-secondary bg-clip-text pb-1 text-left text-4xl font-extrabold italic leading-10 text-transparent;
 }
 
 .contenedor {
@@ -35,9 +35,25 @@ h2 {
 }
 
 .paragraph {
-	@apply prose text-left text-lg leading-relaxed text-neutral-content;
+	@apply prose text-left text-lg leading-relaxed;
 }
-
 u {
 	@apply underline decoration-secondary decoration-wavy decoration-1 underline-offset-4;
+}
+p > a,
+li > a {
+	@apply text-secondary decoration-cyan-500
+	decoration-solid
+	decoration-2
+	hover:text-primary
+	hover:decoration-primary
+	hover:decoration-wavy
+	hover:decoration-1;
+}
+
+.lectura {
+	@apply prose  text-left prose-a:text-secondary prose-a:decoration-cyan-500 prose-a:decoration-solid
+	prose-a:decoration-2
+	md:prose-lg
+	lg:prose-xl;
 }

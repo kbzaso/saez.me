@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="mt-8 w-8/12 rounded bg-cyan-900/25 p-4 hover:rotate-2 hover:scale-110 lg:w-auto">
+	class="mt-8 w-8/12 rounded bg-neutral p-4 transition duration-150 ease-in-out hover:rotate-2 hover:scale-110 hover:bg-neutral-focus hover:shadow-lg lg:w-auto">
 	<h3 class="mb-2 text-lg text-neutral-content md:text-center">
 		You can follow me on:
 	</h3>
@@ -14,25 +14,25 @@
 		<a
 			href="https://www.linkedin.com/in/alejandrosapa/"
 			target="_blank"
-			class="w-10 p-2 text-accent transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-secondary">
+			class="w-10 p-2 text-accent transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-accent-focus">
 			<FaLinkedinIn />
 		</a>
 		<a
 			href="https://github.com/kbzaso/"
 			target="_blank"
-			class="w-10 p-2 text-accent transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-secondary">
+			class="w-10 p-2 text-accent transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-accent-focus">
 			<FaGithub />
 		</a>
 		<a
 			href="https://www.behance.net/kbzaso"
 			target="_blank"
-			class="w-12 p-2 text-accent transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-secondary">
+			class="w-12 p-2 text-accent transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-accent-focus">
 			<FaBehance />
 		</a>
 		<a
 			href="https://dribbble.com/kbzaso"
 			target="_blank"
-			class="w-10 p-2 text-accent transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-secondary">
+			class="w-10 p-2 text-accent transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-accent-focus">
 			<FaDribbble />
 		</a>
 	</div>

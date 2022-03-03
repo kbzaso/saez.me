@@ -8,17 +8,20 @@
 	import { marked } from 'marked';
 </script>
 
-<div id="projects" class="card w-full bg-base-100 shadow-xl">
+<div
+	class="card w-full bg-base-300 shadow-xl transition duration-150 ease-in-out hover:rotate-2 hover:scale-105 hover:bg-neutral-focus hover:shadow-lg">
 	<a href={`${section}/${slug}`}>
-		<figure><img src={image[0].url} alt={name} /></figure>
+		<figure>
+			<img src={image[0].url} alt={name} />
+		</figure>
 		<div class="card-body">
-			<h2 class="card-title text-3xl italic">
+			<h2 class="card-title text-3xl italic text-accent">
 				{name}
 			</h2>
-			<p>{@html marked(extract)}</p>
+			<p class="text-neutral-content">{@html marked(extract)}</p>
 			<div class="card-actions justify-start">
 				{#each tags as tag}
-					<div class="badge bg-secondary">
+					<div class="badge badge-outline badge-accent">
 						{tag}
 					</div>
 				{/each}
