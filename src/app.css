@@ -52,8 +52,7 @@ li > a {
 }
 
 .lectura {
-	@apply prose  text-left prose-a:text-secondary prose-a:decoration-cyan-500 prose-a:decoration-solid
-	prose-a:decoration-2
-	md:prose-lg
-	lg:prose-xl;
+	@apply prose-lg prose text-left prose-h3:text-4xl prose-a:text-secondary prose-a:decoration-cyan-500
+	prose-a:decoration-solid
+	prose-a:decoration-2;
 }

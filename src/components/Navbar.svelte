@@ -32,6 +32,12 @@
 		<Swap />
 		<div class="ml-4 hidden lg:flex lg:items-stretch lg:gap-4">
 			<a
+				href="/"
+				class="{$page.url.pathname === '/'
+					? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
+					: 'btn-outline'} btn rounded-btn btn-md transition ease-in-out hover:shadow-lg "
+				>Home</a>
+			<a
 				href="/about-me"
 				class="{$page.url.pathname === '/about-me'
 					? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
@@ -110,13 +116,20 @@
 		</div>
 	</div>
 	<!-- HAMBURGER MENU -->
-	<a
-		href="#"
-		class="flex flex-col space-y-2 rounded-full bg-secondary p-4 lg:hidden">
-		<span class="block h-0.5 w-6 bg-white" />
-		<span class="block h-0.5 w-6 bg-white" />
-		<span class="block h-0.5 w-6 bg-white" />
-	</a>
+
+	<label
+		class="btn-outline btn btn-circle mr-6 lg:hidden"
+		for="my-drawer-4">
+		<!-- hamburger icon -->
+		<svg
+			class="swap-ON fill-current"
+			xmlns="http://www.w3.org/2000/svg"
+			width="32"
+			height="32"
+			viewBox="0 0 512 512"
+			><path
+				d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg>
+	</label>
 </div>
 
 <style>
