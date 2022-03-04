@@ -27,7 +27,7 @@ span {
 }
 
 .contenedor {
-	@apply container mx-auto px-5 sm:py-4 md:px-6 md:py-12 lg:px-4 xl:px-32;
+	@apply container mx-auto px-5 md:px-6 lg:px-4 xl:px-32;
 }
 
 h2 {

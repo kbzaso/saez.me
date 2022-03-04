@@ -35,20 +35,20 @@
 				href="/"
 				class="{$page.url.pathname === '/'
 					? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
-					: 'btn-outline'} btn rounded-btn btn-md transition ease-in-out hover:shadow-lg "
+					: 'btn-outline'} btn rounded-btn btn-md text-xl capitalize italic transition ease-in-out hover:shadow-lg"
 				>Home</a>
 			<a
 				href="/about-me"
 				class="{$page.url.pathname === '/about-me'
 					? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
-					: 'btn-outline'} btn rounded-btn btn-md transition ease-in-out hover:shadow-lg "
+					: 'btn-outline'} btn rounded-btn btn-md text-xl capitalize italic transition ease-in-out hover:shadow-lg "
 				>About me</a>
 			{#each pages as { title, slug }}
 				<a
 					href={`/${slug}`}
 					class="{$page.url.pathname === `/${slug}`
 						? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
-						: 'btn-outline'} btn rounded-btn btn-md transition ease-in-out hover:shadow-lg">
+						: 'btn-outline'} btn rounded-btn btn-md text-xl capitalize italic transition ease-in-out hover:shadow-lg">
 					{title}
 				</a>
 			{/each}
@@ -60,7 +60,7 @@
 					$page.url.pathname.includes('/design') ||
 					$page.url.pathname.includes('/audiovisual')
 						? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
-						: 'btn-outline'} btn rounded-btn btn-md transition ease-in-out hover:shadow-lg">
+						: 'btn-outline'} btn rounded-btn btn-md text-xl capitalize italic transition ease-in-out hover:shadow-lg">
 					<span class="mr-2 w-4"><FaCaretDown /></span> Projects</span>
 				<ul
 					tabindex="0"
@@ -68,19 +68,19 @@
 					<li>
 						<a
 							href="/development"
-							class="hover:bg-base-200 hover:text-base-content">
+							class="italic hover:bg-base-200 hover:text-base-content">
 							<span class="mr-2 w-4"><Js /></span> Development</a>
 					</li>
 					<li>
 						<a
 							href="/design"
-							class="hover:bg-base-200 hover:text-base-content">
-							<span class="mr-2 w-4"><Pencil /></span>Graphic Design</a>
+							class="italic hover:bg-base-200 hover:text-base-content">
+							<span class="mr-2 w-4"><Pencil /></span>Design</a>
 					</li>
 					<li>
 						<a
 							href="/audiovisual"
-							class="hover:bg-base-200 hover:text-base-content"
+							class="italic hover:bg-base-200 hover:text-base-content"
 							><span class="mr-2 w-4"><Audiovisual /></span
 							>Audiovisual</a>
 					</li>
@@ -105,7 +105,7 @@
 
 			<button
 				type="button"
-				class="btn btn-accent rounded-btn btn-md transition ease-in-out"
+				class="btn btn-accent rounded-btn btn-md text-xl capitalize italic transition ease-in-out"
 				data-tally-open="wLo013"
 				data-tally-overlay="1"
 				data-tally-emoji-text="🚀"
@@ -115,8 +115,8 @@
 			</button>
 		</div>
 	</div>
-	<!-- HAMBURGER MENU -->
 
+	<!-- HAMBURGER MENU -->
 	<label
 		class="btn-outline btn btn-circle mr-6 lg:hidden"
 		for="my-drawer-4">

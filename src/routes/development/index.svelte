@@ -21,8 +21,8 @@
 	export let section;
 </script>
 
-<section class="contenedor">
-	<Breadcrums path="Development" />
+<Breadcrums path="Development" />
+<section class="contenedor mt-6">
 	<div
 		class="mt-4 grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-8">
 		{#each projects as { name, description, image, slug, extract, tags }}

@@ -24,10 +24,7 @@
 <article class="contenedor">
 	<Breadcrums />
 	{#each projects as { name, content }}
-		<div
-			class="lectura mx-auto on:click={() => {
-				document.getElementById('my-drawer-4').click();
-			}} max-w-prose">
+		<div class="lectura mx-auto max-w-prose">
 			<h3 class="text-4xl italic text-base-content">
 				{name}
 			</h3>

@@ -4,7 +4,7 @@
 	let [firstElement, ...rest] = path;
 </script>
 
-<div class="breadcrumbs m-2 md:mb-8">
+<div class="breadcrumbs m-6">
 	<ul class="justify-center">
 		<li>
 			<a href="/"
@@ -33,3 +33,4 @@
 		{/each}
 	</ul>
 </div>
+<div class="divider mx-auto w-1/2" />

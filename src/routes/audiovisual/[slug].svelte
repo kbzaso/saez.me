@@ -26,7 +26,7 @@
 	{#each projects as { name, content, video }}
 		<div
 			class="
-			lectura mx-auto mt-4 max-w-prose
+			lectura mx-auto max-w-prose
 			">
 			<h3 class="text-3xl italic text-base-content">
 				{name}
