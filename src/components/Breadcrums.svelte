@@ -4,13 +4,13 @@
 	let [firstElement, ...rest] = path;
 </script>
 
-<div class="breadcrumbs m-6">
-	<ul class="justify-center">
+<div class="breadcrumbs mx-auto">
+	<ul class="flex-col justify-center md:flex-row">
 		<li>
 			<a href="/"
 				><svg
 					version="1.1"
-					class="mr-2 w-4 fill-accent"
+					class="mr-2 w-4 fill-secondary"
 					id="Capa_1"
 					xmlns="http://www.w3.org/2000/svg"
 					xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -23,9 +23,9 @@
 				</svg> Home</a>
 		</li>
 		{#each rest as url}
-			<li class="capitalize">
+			<li class="truncate capitalize">
 				{#if url == 'development' || url == 'design' || url == 'audiovisual'}
-					<a href="/development">{url}</a>
+					<a href={`/${url}`}>{url}</a>
 				{:else}
 					{url}
 				{/if}
@@ -33,4 +33,4 @@
 		{/each}
 	</ul>
 </div>
-<div class="divider mx-auto w-1/2" />
+<div class="divider mx-auto w-1/3" />

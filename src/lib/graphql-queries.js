@@ -11,52 +11,42 @@ export const homeQuery = gql`
 
 export const developmentQuery = gql`
 	query MyDevelopmentProjects {
-		projects(where: { tags: "Development" }) {
+		projects(where: { worktype: Development }) {
 			id
 			name
 			slug
-			content {
-				html
-			}
-			tags
 			image {
 				url
 			}
 			date
 			extract
+			category
 		}
 	}
 `;
 
 export const designQuery = gql`
 	query MyDesignProjects {
-		projects(where: { tags: "Graphic Design" }) {
+		projects(where: { worktype: Design }) {
 			id
 			name
 			slug
-			content {
-				html
-			}
-			tags
 			image {
 				url
 			}
 			date
 			extract
+			category
 		}
 	}
 `;
 
 export const audiovisualQuery = gql`
 	query MyAudiovisualProjects {
-		projects(where: { tags: "Audiovisual" }) {
+		projects(where: { worktype: Audiovisual }) {
 			id
 			name
 			slug
-			content {
-				html
-			}
-			tags
 			image {
 				url
 			}
@@ -72,10 +62,14 @@ export const slugQuery = gql`
 			id
 			name
 			slug
+			timeline
+			technologies
+			myrole
+			deliverables
 			content {
 				html
 			}
-			tags
+			technologies
 			image {
 				url
 			}

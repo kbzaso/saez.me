@@ -21,10 +21,10 @@
 	export let projects;
 </script>
 
-<article class="contenedor">
+<article class="contenedor mb-8">
 	<Breadcrums />
 	{#each projects as { name, content, video }}
-		<div
+		<main
 			class="
 			lectura mx-auto max-w-prose
 			">
@@ -36,9 +36,10 @@
 				<iframe
 					class="aspect-video w-full"
 					src={video}
+					title="reel video"
 					allow="autoplay; fullscreen; picture-in-picture"
 					allowfullscreen />
 			</div>
-		</div>
+		</main>
 	{/each}
 </article>

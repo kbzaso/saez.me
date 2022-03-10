@@ -5,7 +5,7 @@
 </script>
 
 <section>
-	<div
+	<main
 		class="container mx-auto flex flex-col items-center px-5 sm:py-4 md:flex-row md:px-6 md:py-12 lg:px-4 xl:px-32">
 		<div
 			class="flex flex-col items-center text-center md:mb-0 md:w-1/2 md:items-start md:text-left lg:flex-grow">
@@ -28,12 +28,12 @@
 			</div>
 		</div>
 
-		<div
+		<figure
 			class="mask mask-squircle order-first mb-8 w-5/6 bg-universe bg-cover md:order-last md:mb-0 md:w-1/2 lg:my-0 lg:w-full lg:max-w-lg">
 			<img
 				class="object-cover object-center"
 				alt="Profile of Alejandro"
 				{src} />
-		</div>
-	</div>
+		</figure>
+	</main>
 </section>

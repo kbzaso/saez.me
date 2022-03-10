@@ -1,7 +1,16 @@
+<script>
+	import { slide } from 'svelte/transition';
+	let isOpen = false;
+	const toggle = () => (isOpen = !isOpen);
+	const closeDrawer = () => {
+		document.getElementById('my-drawer-4').click();
+	};
+</script>
+
 <div class="drawer-side">
 	<label for="my-drawer-4" class="drawer-overlay" />
 	<ul
-		class="menu w-80 flex-col overflow-y-auto bg-base-100 p-4 text-base-content">
+		class="menu w-80 flex-col gap-2 overflow-y-auto bg-base-100 p-4">
 		<label
 			class="btn-outline btn btn-circle self-end"
 			for="my-drawer-4">
@@ -15,59 +24,55 @@
 				><polygon
 					points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" /></svg>
 		</label>
-		<!-- Sidebar content here -->
 		<p class="uppercase tracking-widest">🖐 Hello there</p>
 		<li class="mt-6">
 			<a
 				href="/"
-				on:click={() => {
-					document.getElementById('my-drawer-4').click();
-				}}
-				class="title underline decoration-4">>Home</a>
+				on:click={closeDrawer}
+				class="text-4xl font-extrabold italic leading-10 text-base-content underline decoration-4 "
+				>Home</a>
 		</li>
 		<li>
 			<a
 				href="/about-me"
-				on:click={() => {
-					document.getElementById('my-drawer-4').click();
-				}}
-				class="title underline decoration-4">>About me</a>
+				on:click={closeDrawer}
+				class="text-4xl font-extrabold italic leading-10 text-base-content underline decoration-4 "
+				>About me</a>
 		</li>
-		<div tabindex="0" class="collapse">
-			<input type="checkbox" />
-			<div class="title collapse-title">>Projects</div>
-			<div class="collapse-content">
-				<ul>
-					<li class="ml-4">
-						<a
-							href="/development"
-							on:click={() => {
-								document.getElementById('my-drawer-4').click();
-							}}
-							class="title underline decoration-4">
-							Development</a>
-					</li>
-					<li class="ml-4">
-						<a
-							href="/design"
-							on:click={() => {
-								document.getElementById('my-drawer-4').click();
-							}}
-							class="title underline decoration-4">
-							Design</a>
-					</li>
-					<li class="ml-4">
-						<a
-							href="/audiovisual"
-							on:click={() => {
-								document.getElementById('my-drawer-4').click();
-							}}
-							class="title underline decoration-4">Audiovisual</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<li class="mt-2">
+		<li>
+			<span
+				class="text-4xl font-extrabold italic leading-10 text-base-content underline decoration-cyan-500 decoration-4 "
+				on:click={toggle}
+				aria-expanded={isOpen}
+				><svg
+					style="tran"
+					width="20"
+					height="30"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="4"
+					viewBox="0 0 18 24"
+					stroke="currentColor"><path d="M9 5l7 7-7 7" /></svg
+				>Projects</span>
+			{#if isOpen}
+				<span
+					class="ml-4 flex flex-col items-start text-3xl font-extrabold italic leading-10 text-base-content underline decoration-pink-500 decoration-4 hover:bg-transparent"
+					transition:slide={{ duration: 300 }}>
+					<a
+						on:click={toggle}
+						on:click={closeDrawer}
+						href="/development">Development</a>
+					<a on:click={closeDrawer} on:click={toggle} href="/design"
+						>Design</a>
+					<a
+						on:click={closeDrawer}
+						on:click={toggle}
+						href="/audiovisual">Audiovisual</a>
+				</span>
+			{/if}
+		</li>
+		<li>
 			<a
 				href="#"
 				type="button"
@@ -76,10 +81,30 @@
 				data-tally-emoji-text="🚀"
 				data-tally-emoji-animation="wave"
 				data-tally-auto-close="5000"
-				class="title underline decoration-4"
-				on:click={() => {
-					document.getElementById('my-drawer-4').click();
-				}}>>Contact</a>
+				class="text-4xl font-extrabold italic leading-10 text-base-content underline decoration-4 "
+				on:click={closeDrawer}>Contact</a>
 		</li>
 	</ul>
 </div>
+
+<style>
+	button {
+		border: none;
+		background: none;
+		display: block;
+		color: inherit;
+		font-size: 36px;
+		cursor: pointer;
+		margin: 0;
+		padding-bottom: 0.5em;
+		padding-top: 0.5em;
+	}
+
+	svg {
+		transition: transform 0.2s ease-in;
+	}
+
+	[aria-expanded='true'] svg {
+		transform: rotate(0.25turn);
+	}
+</style>

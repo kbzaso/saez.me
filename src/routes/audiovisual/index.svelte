@@ -18,21 +18,20 @@
 	import Works from '../../components/Works.svelte';
 	import Breadcrums from '../../components/Breadcrums.svelte';
 	export let projects;
-	export let section;
 </script>
 
 <Breadcrums />
 <section class="contenedor mt-6">
 	<div
-		class="mt-4 grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-8">
-		{#each projects as { name, description, image, slug, extract, tags, video }}
+		class="mt-4 grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-8 md:grid-cols-[repeat(auto-fit,minmax(24rem,24rem))]">
+		{#each projects as { name, description, image, slug, extract, technologies, video }}
 			<Works
 				{name}
 				{description}
 				{image}
 				{slug}
 				{extract}
-				{tags}
+				{technologies}
 				{video}
 				section="audiovisual" />
 		{/each}

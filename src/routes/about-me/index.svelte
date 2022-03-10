@@ -1,41 +1,25 @@
-<script context="module">
-	import { client } from '$lib/graphql-client';
-	import { homeQuery } from '$lib/graphql-queries';
-
-	export const load = async () => {
-		const { assets } = await client.request(homeQuery);
-
-		return {
-			status: 200,
-			props: {
-				assets,
-			},
-		};
-	};
-</script>
-
 <script>
 	import SocialIcons from '../../components/SocialIcons.svelte';
-	export let assets;
+	const CITY_PHOTO =
+		'https://media.graphcms.com/output=format:webp/resize=height:800,fit:max/BzsYO2gTP617gt5UZMR8';
 </script>
 
-<article class="contenedor prose">
+<article class="contenedor prose mb-8">
 	<h3
-		class="mb-4 bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text pb-1 text-left text-4xl font-extrabold italic leading-10 text-neutral-content text-transparent">
-		I’m Chilean mind currently based in Santiago, Chile.
+		class="mb-4 mt-10 bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text pb-1 text-left text-4xl font-extrabold italic leading-10 text-neutral-content text-transparent">
+		I’m a Chilean soul currently based in Santiago, Chile.
 	</h3>
 	<p class=" text-2xl leading-normal ">
 		A freelance creative, nowadays working with growing businesses in
 		their digital transformation. Mainly, I focus on creating
-		efficient interfaces that makes technology easier to use.
+		efficient interfaces that make technology easier to use, but also
+		I feel persuaded on brand identity, brand strategy, and motion
+		graphics.
 	</p>
 	<div class="flex flex-col md:flex-row md:gap-12 lg:gap-20">
-		<div class="w-full md:w-1/2">
-			<img
-				class=""
-				src={assets[3].url}
-				alt="Alejandro seat in a stairs" />
-		</div>
+		<figure class="m-0 h-full w-full md:w-1/2">
+			<img src={CITY_PHOTO} alt="Alejandro seat in a stairs" />
+		</figure>
 		<div class="w-full md:w-1/2">
 			<p
 				class="lectura first-letter:float-left first-letter:mr-3
@@ -51,14 +35,16 @@
 				I’m part of <a
 					href="https://platzi.com/master/"
 					target="_blank">Platzi Master</a> what it is an intensive education
-				program that train future tech leaders in Latin America. My main
-				focus on the program is front-end development with React and Nextjs,
-				working with agile methodologies like SCRUM. Also I completed additional
-				courses in Product Design, User Experience and Soft skills paths.
+				program that prepares future tech leaders in Latin America. My
+				main focus on the program is front-end development with React and
+				Nextjs, working with agile methodologies like SCRUM. Additionally,
+				I have completed additional courses in Product Design, User Experience,
+				and Soft skills paths.
 			</p>
 			<p class="lectura">
 				I’m currently working as a freelance front-end developer but
-				also open for design gigs, I always interested in a challenge.
+				also open for design gigs, I'm always interested in a
+				challenge.
 				<button
 					type="button"
 					class="text-secondary underline
@@ -86,7 +72,7 @@
 	</div>
 
 	<div
-		class="flex items-center rounded-lg border-2 p-2 text-neutral shadow-sm">
+		class="mt-4 flex items-center rounded-lg border-2 border-neutral p-2 shadow-sm lg:mt-0">
 		<div class="mr-4 fill-secondary p-3">
 			<svg class="text-400 h-10 w-10 px-1" viewBox="0 0 16 16">
 				<path
@@ -95,7 +81,7 @@
 			</svg>
 		</div>
 		<div>
-			<p class="lectura">
+			<p class="lectura text-neutral">
 				This site is in constant development. The technologies I'm
 				using are <a href="https://github.com/" target="_blank"
 					>Github</a

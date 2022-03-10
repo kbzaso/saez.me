@@ -3,8 +3,8 @@
 	export let image = '';
 	export let extract = '';
 	export let slug = '';
-	export let tags = [];
 	export let section;
+	export let category;
 	import { marked } from 'marked';
 </script>
 
@@ -14,18 +14,14 @@
 		<figure>
 			<img src={image[0].url} alt={name} />
 		</figure>
-		<div class="card-body">
-			<h2 class="card-title text-3xl italic text-accent">
+		<div class="card-body pb-4">
+			<h2 class="card-title text-3xl italic text-accent line-clamp-2">
 				{name}
 			</h2>
-			<p class="text-neutral-content">{@html marked(extract)}</p>
-			<div class="card-actions justify-start">
-				{#each tags as tag}
-					<div class="badge badge-outline badge-accent">
-						{tag}
-					</div>
-				{/each}
-			</div>
+			<p class="text-neutral-content line-clamp-3">
+				{@html marked(extract)}
+			</p>
 		</div>
+		<div class="badge badge-accent ml-8 mb-8">{category}</div>
 	</a>
 </div>

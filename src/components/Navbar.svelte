@@ -6,9 +6,11 @@
 	import Audiovisual from 'svelte-icons/fa/FaFilm.svelte';
 	import Swap from './Swap.svelte';
 	export let pages;
+	export let segment;
 </script>
 
-<div class="navbar mb-2 pt-6 text-neutral-content">
+<div
+	class="navbar mx-auto mb-2 max-w-screen-2xl pt-6 text-neutral-content">
 	<div class="mx-2 flex-1 px-2">
 		<div
 			class={$page.url.pathname !== '/'
@@ -33,20 +35,20 @@
 		<div class="ml-4 hidden lg:flex lg:items-stretch lg:gap-4">
 			<a
 				href="/"
-				class="{$page.url.pathname === '/'
+				class="{segment === '/'
 					? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
 					: 'btn-outline'} btn rounded-btn btn-md text-xl capitalize italic transition ease-in-out hover:shadow-lg"
 				>Home</a>
 			<a
 				href="/about-me"
-				class="{$page.url.pathname === '/about-me'
+				class="{segment === '/about-me'
 					? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
 					: 'btn-outline'} btn rounded-btn btn-md text-xl capitalize italic transition ease-in-out hover:shadow-lg "
 				>About me</a>
 			{#each pages as { title, slug }}
 				<a
 					href={`/${slug}`}
-					class="{$page.url.pathname === `/${slug}`
+					class="{segment === `/${slug}`
 						? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
 						: 'btn-outline'} btn rounded-btn btn-md text-xl capitalize italic transition ease-in-out hover:shadow-lg">
 					{title}
@@ -56,9 +58,9 @@
 			<div class="dropdown">
 				<span
 					tabindex="0"
-					class="{$page.url.pathname.includes('/development') ||
-					$page.url.pathname.includes('/design') ||
-					$page.url.pathname.includes('/audiovisual')
+					class="{segment.includes('/development') ||
+					segment.includes('/design') ||
+					segment.includes('/audiovisual')
 						? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
 						: 'btn-outline'} btn rounded-btn btn-md text-xl capitalize italic transition ease-in-out hover:shadow-lg">
 					<span class="mr-2 w-4"><FaCaretDown /></span> Projects</span>

@@ -18,36 +18,22 @@
 
 <script>
 	import Breadcrums from '../../components/Breadcrums.svelte';
+	import InfoBox from '../../components/InfoBox.svelte';
 	export let projects;
 </script>
 
 <Breadcrums />
-<article class="contenedor flex flex-col lg:flex-row">
-	<aside
-		class="mb-6 grid grid-cols-[repeat(auto-fit,minmax(8rem,1fr))] gap-4 prose-h4:mt-4 prose-h4:text-primary first:prose-h4:mt-0 lg:h-fit lg:grid-rows-3">
-		<div>
-			<h4 class="uppercase tracking-widest">Timeline</h4>
-			<p>Mar - Apr 2021</p>
-		</div>
-		<div>
-			<h4 class="uppercase tracking-widest">Platform</h4>
-			<p>Responsive Website</p>
-		</div>
-		<div>
-			<h4 class="uppercase tracking-widest">My Role</h4>
-			<ul>
-				<li>Product Designer</li>
-				<li>Webflow Developer</li>
-			</ul>
-		</div>
-	</aside>
-
-	{#each projects as { name, content }}
-		<div class="lectura mx-auto max-w-prose">
-			<h3 class="text-4xl italic text-base-content">
+<article class="contenedor mb-8 flex flex-col lg:flex-row">
+	{#each projects as { name, content, timeline, myrole, technologies, deliverables }}
+		<InfoBox {timeline} {technologies} {deliverables} {myrole} />
+		<main class="lectura mx-auto mt-8 max-w-prose">
+			<h3 class="text-4xl italic">
 				{name}
 			</h3>
-			{@html content.html}
-		</div>
+			<div
+				class="prose-h2:mb-4 prose-h2:italic prose-h2:text-primary prose-h3:text-lg prose-h3:italic prose-h3:text-primary prose-h4:text-primary prose-blockquote:text-secondary">
+				{@html content.html}
+			</div>
+		</main>
 	{/each}
 </article>
