@@ -9,7 +9,7 @@
 		class="mb-4 mt-10 bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text pb-1 text-left text-4xl font-extrabold italic leading-10 text-neutral-content text-transparent">
 		I’m a Chilean soul currently based in Santiago, Chile.
 	</h3>
-	<p class=" text-2xl leading-normal ">
+	<p class="text-2xl leading-normal ">
 		A freelance creative, nowadays working with growing businesses in
 		their digital transformation. Mainly, I focus on creating
 		efficient interfaces that make technology easier to use, but also

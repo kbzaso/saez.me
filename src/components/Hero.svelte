@@ -14,10 +14,11 @@
 				Hi! I'm Alejandro Sáez - a frontend developer, UX/UI and
 				multimedia designer.
 			</h1>
-			<p class="paragraph">
+			<p class="lectura">
 				I'm in love with design and how it affects every aspect of
-				life, I like tech and creating digital products. I'm a
-				photography enthusiast too.
+				life, I like tech and creating digital products. If you are
+				curious, read more <a class="italic" href="/about-me"
+					>about me.</a>
 			</p>
 			<p class="paragraph mt-4 w-full">
 				🧠 Welcome to my digital mind space.

@@ -27,12 +27,6 @@
 	import { themeChange } from 'theme-change';
 	export let pages;
 
-	// onMount(async () => {
-	// 	themeChange(false);
-	// });
-
-	// let box;
-
 	afterNavigate(() => {
 		document
 			.querySelector('.drawer-content')
@@ -43,6 +37,11 @@
 		themeChange(false);
 	});
 </script>
+
+<head>
+	<title
+		>Alejandro Sáez | Frontend Dev, UX/UI, Multimedia Designer</title>
+</head>
 
 <div class="drawer drawer-end h-screen w-full">
 	<input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
