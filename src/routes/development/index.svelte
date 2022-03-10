@@ -59,11 +59,13 @@
 				class="lectura first-letter:float-left
 		first-letter:mr-3 first-letter:text-7xl first-letter:font-bold
 		first-letter:text-accent first-line:uppercase first-line:tracking-widest">
-				I love to work with HTML, CSS, and JavaScript! Also, I have
-				experience working with some frameworks like Svelte, React,
-				and Vue. But the simplicity of Svelte takes all my heart. ❤️ <br />
-				<br />
-				I try to make a high-performance development focus on details.
+				I love to work with HTML, CSS, and JavaScript! But working
+				with some frameworks like Svelte, React, or Vue, make me feel
+				like a ¡super human! But I have to say that the simplicity of
+				Svelte takes all my heart. ❤️ <br />
+
+				I always try to make a high-performance development focus on
+				details.
 			</p>
 		</div>
 	</article>

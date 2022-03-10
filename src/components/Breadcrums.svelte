@@ -5,7 +5,7 @@
 </script>
 
 <div class="breadcrumbs mx-auto">
-	<ul class="flex-col justify-center md:flex-row">
+	<ul class="flex-col justify-center gap-2 md:flex-row md:gap-0">
 		<li>
 			<a href="/"
 				><svg
