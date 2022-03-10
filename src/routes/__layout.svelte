@@ -23,10 +23,23 @@
 	import Navbar from '../components/Navbar.svelte';
 	import Footer from '../components/Footer.svelte';
 	import { onMount } from 'svelte';
+	import { afterNavigate } from '$app/navigation';
 	import { themeChange } from 'theme-change';
 	export let pages;
 
-	onMount(async () => {
+	// onMount(async () => {
+	// 	themeChange(false);
+	// });
+
+	// let box;
+
+	afterNavigate(() => {
+		document
+			.querySelector('.drawer-content')
+			.scrollTo({ top: 0, behavior: 'smooth' });
+	});
+
+	onMount(() => {
 		themeChange(false);
 	});
 </script>
@@ -35,14 +48,14 @@
 	<input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
 	<div class="drawer-content">
 		<Navbar {pages} segment={$page.url.pathname} />
-		<PageTransition refresh={$page.url.pathname}>
-			<div class="container mx-auto flex min-h-screen flex-col">
-				<div class="main flex-grow">
+		<div class="container mx-auto flex min-h-screen flex-col">
+			<div class="main flex-grow">
+				<PageTransition refresh={$page.url.pathname}>
 					<slot />
-				</div>
-				<Footer />
+				</PageTransition>
 			</div>
-		</PageTransition>
+			<Footer />
+		</div>
 	</div>
 	<MobileNav />
 </div>

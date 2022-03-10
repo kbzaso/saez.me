@@ -9,8 +9,8 @@
 	export let segment;
 </script>
 
-<div
-	class="navbar mx-auto mb-2 max-w-screen-2xl pt-6 text-neutral-content">
+<nav
+	class="navbar sticky top-0 z-10 mx-auto mb-2 max-w-screen-2xl bg-base-200 pt-6 text-neutral-content">
 	<div class="mx-2 flex-1 px-2">
 		<div
 			class={$page.url.pathname !== '/'
@@ -132,7 +132,7 @@
 			><path
 				d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg>
 	</label>
-</div>
+</nav>
 
 <style>
 	svg {
