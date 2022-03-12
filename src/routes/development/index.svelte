@@ -16,10 +16,38 @@
 
 <script>
 	import Works from '../../components/Works.svelte';
+	import SvelteSeo from 'svelte-seo';
 	export let projects;
+	const SEO_CARD_IMAGE =
+		'https://media.graphcms.com/output=format:webp/resize=height:800,fit:max/tZGYD890SemYXcQRwmIg';
 	const DEV_PHOTO =
 		'https://media.graphcms.com/output=format:webp/resize=height:800,fit:max/CHau8X0oSmWz0FPWVJZz';
 </script>
+
+<SvelteSeo
+	twitter={{
+		site: '@kbzaso',
+		title: 'I just belive in HTML, CSS and JavaScript',
+		description:
+			'Here is a portfolio of my frontend development work.',
+		image: SEO_CARD_IMAGE,
+		imageAlt: 'SEO Card',
+	}}
+	openGraph={{
+		title: 'I just belive in HTML, CSS and JavaScript',
+		description:
+			'Here is a portfolio of my frontend development work.',
+		type: 'article',
+		url: `https://www.saez.me/development`,
+		images: [
+			{
+				url: SEO_CARD_IMAGE,
+				width: 850,
+				height: 650,
+				alt: 'SEO Card',
+			},
+		],
+	}} />
 
 <section class="contenedor mt-6">
 	<main class="mx-auto flex h-96 flex-col justify-center">
@@ -78,7 +106,7 @@
 </section>
 <aside class="contenedor mt-6">
 	<div
-		class="mt-4 grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-8 md:grid-cols-[repeat(auto-fit,minmax(24rem,24rem))]">
+		class="mt-4 mb-8 grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-8 md:grid-cols-[repeat(auto-fit,minmax(24rem,24rem))]">
 		{#each projects as { name, description, image, slug, extract, category }}
 			<Works
 				{name}

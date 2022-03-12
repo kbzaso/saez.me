@@ -1,5 +1,6 @@
 <script>
 	import { slide } from 'svelte/transition';
+	import { menu, projects } from '$lib/info';
 	let isOpen = false;
 	const toggle = () => (isOpen = !isOpen);
 	const closeDrawer = () => {
@@ -27,17 +28,17 @@
 		<p class="uppercase tracking-widest">🖐 Hello there</p>
 		<li class="mt-6">
 			<a
-				href="/"
+				href={menu.home.url}
 				on:click={closeDrawer}
-				class="text-4xl font-extrabold italic leading-10 text-base-content underline decoration-4 "
-				>Home</a>
+				class="text-4xl font-extrabold capitalize italic leading-10 text-base-content underline decoration-4 "
+				>{menu.home.name}</a>
 		</li>
 		<li>
 			<a
-				href="/about-me"
+				href={menu.about.url}
 				on:click={closeDrawer}
-				class="text-4xl font-extrabold italic leading-10 text-base-content underline decoration-4 "
-				>About me</a>
+				class="text-4xl font-extrabold capitalize italic leading-10 text-base-content underline decoration-4 "
+				>{menu.about.name}</a>
 		</li>
 		<li>
 			<span
@@ -59,47 +60,30 @@
 				<span
 					class="ml-4 flex flex-col items-start text-3xl font-extrabold italic leading-10 text-base-content underline decoration-pink-500 decoration-4 hover:bg-transparent"
 					transition:slide={{ duration: 300 }}>
-					<a
-						on:click={toggle}
-						on:click={closeDrawer}
-						href="/development">Development</a>
-					<a on:click={closeDrawer} on:click={toggle} href="/design"
-						>Design</a>
-					<a
-						on:click={closeDrawer}
-						on:click={toggle}
-						href="/audiovisual">Audiovisual</a>
+					{#each projects as project}
+						<a
+							on:click={toggle}
+							on:click={closeDrawer}
+							href={project.url}>{project.name}</a>
+					{/each}
 				</span>
 			{/if}
 		</li>
 		<li>
-			<a
-				href="#"
+			<button
 				type="button"
 				data-tally-open="wLo013"
 				data-tally-overlay="1"
 				data-tally-emoji-text="🚀"
 				data-tally-emoji-animation="wave"
 				data-tally-auto-close="5000"
-				class="text-4xl font-extrabold italic leading-10 text-base-content underline decoration-4 "
-				on:click={closeDrawer}>Contact</a>
+				class="text-4xl font-extrabold italic leading-10 text-base-content underline decoration-accent decoration-4"
+				on:click={closeDrawer}>{menu.contact}</button>
 		</li>
 	</ul>
 </div>
 
 <style>
-	button {
-		border: none;
-		background: none;
-		display: block;
-		color: inherit;
-		font-size: 36px;
-		cursor: pointer;
-		margin: 0;
-		padding-bottom: 0.5em;
-		padding-top: 0.5em;
-	}
-
 	svg {
 		transition: transform 0.2s ease-in;
 	}

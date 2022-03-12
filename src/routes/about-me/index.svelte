@@ -1,8 +1,37 @@
 <script>
 	import SocialIcons from '../../components/SocialIcons.svelte';
+	import SvelteSeo from 'svelte-seo';
 	const CITY_PHOTO =
 		'https://media.graphcms.com/output=format:webp/resize=height:800,fit:max/BzsYO2gTP617gt5UZMR8';
 </script>
+
+<SvelteSeo
+	twitter={{
+		site: '@kbzaso',
+		title:
+			'I’m a Chilean creative currently based in Santiago, Chile.',
+		description:
+			'A freelance creative, nowadays working with growing businesses in their digital transformation.',
+		image:
+			'https://media.graphcms.com/output=format:webp/resize=height:800,fit:max/tZGYD890SemYXcQRwmIg',
+		imageAlt: 'SEO card',
+	}}
+	openGraph={{
+		title:
+			'I’m a Chilean creative currently based in Santiago, Chile.',
+		description:
+			'A freelance creative, nowadays working with growing businesses in their digital transformation.',
+		url: 'https://www.saez.me/about-me',
+		type: 'website',
+		images: [
+			{
+				url: 'https://media.graphcms.com/output=format:webp/resize=height:800,fit:max/tZGYD890SemYXcQRwmIg',
+				width: 850,
+				height: 650,
+				alt: 'SEO card',
+			},
+		],
+	}} />
 
 <article class="contenedor prose mb-8">
 	<h3

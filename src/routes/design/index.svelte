@@ -16,10 +16,38 @@
 
 <script>
 	import Works from '../../components/Works.svelte';
+	import SvelteSeo from 'svelte-seo';
 	export let projects;
+	const SEO_CARD_IMAGE =
+		'https://media.graphcms.com/output=format:webp/resize=height:800,fit:max/tZGYD890SemYXcQRwmIg';
 	const DESIGN_PHOTO =
 		'https://media.graphcms.com/output=format:webp/resize=height:800,fit:max/5vKTc2iKT9OMqCymwIyf';
 </script>
+
+<SvelteSeo
+	twitter={{
+		site: '@kbzaso',
+		title:
+			'Design is not just what it looks like and feels like. Design is how it works.',
+		description: 'Here is a portfolio of my design work.',
+		image: SEO_CARD_IMAGE,
+		imageAlt: 'SEO Card',
+	}}
+	openGraph={{
+		title:
+			'Design is not just what it looks like and feels like. Design is how it works.',
+		description: 'Here is a portfolio of my design work.',
+		type: 'article',
+		url: `https://www.saez.me/design`,
+		images: [
+			{
+				url: SEO_CARD_IMAGE,
+				width: 850,
+				height: 650,
+				alt: 'SEO Card',
+			},
+		],
+	}} />
 
 <section class="contenedor mt-6">
 	<main class="mx-auto flex h-96 flex-col justify-center">
@@ -72,10 +100,9 @@
 	</h2>
 	<aside
 		class="my-6 grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-8 md:grid-cols-[repeat(auto-fit,minmax(24rem,24rem))]">
-		{#each projects as { name, description, image, slug, extract, category }}
+		{#each projects as { name, image, slug, extract, category }}
 			<Works
 				{name}
-				{description}
 				{image}
 				{slug}
 				{extract}

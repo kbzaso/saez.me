@@ -1,16 +1,14 @@
 <script>
 	import { page } from '$app/stores';
 	import FaCaretDown from 'svelte-icons/fa/FaCaretDown.svelte';
-	import Pencil from 'svelte-icons/fa/FaPencilAlt.svelte';
-	import Js from 'svelte-icons/di/DiJsBadge.svelte';
-	import Audiovisual from 'svelte-icons/fa/FaFilm.svelte';
 	import Swap from './Swap.svelte';
 	export let pages;
 	export let segment;
+	import { menu, projects } from '$lib/info';
 </script>
 
 <nav
-	class="navbar sticky top-0 z-10 mx-auto mb-2 max-w-screen-2xl bg-base-200 pt-6  text-neutral-content shadow-lg">
+	class="navbar sticky top-0 z-10 mx-auto mb-2 max-w-screen-2xl bg-base-200 pt-6  text-neutral-content">
 	<div class="mx-2 flex-1 px-2">
 		<div
 			class={$page.url.pathname !== '/'
@@ -34,17 +32,17 @@
 		<Swap />
 		<div class="ml-4 hidden lg:flex lg:items-stretch lg:gap-4">
 			<a
-				href="/"
+				href={menu.home.url}
 				class="{segment === '/'
 					? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
 					: 'btn-outline'} btn rounded-btn btn-md bg-base-200 text-xl capitalize italic transition ease-in-out hover:shadow-lg"
-				>Home</a>
+				>{menu.home.name}</a>
 			<a
-				href="/about-me"
+				href={menu.about.url}
 				class="{segment === '/about-me'
 					? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
 					: 'btn-outline'} btn rounded-btn btn-md bg-base-200 text-xl capitalize italic transition ease-in-out hover:shadow-lg "
-				>About me</a>
+				>{menu.about.name}</a>
 			{#each pages as { title, slug }}
 				<a
 					href={`/${slug}`}
@@ -67,7 +65,15 @@
 				<ul
 					tabindex="0"
 					class=" dropdown-content menu rounded-box mt-4 w-52 bg-base-content p-2 text-base-200 shadow-lg">
-					<li>
+					{#each projects as { name, url, icon }}
+						<li>
+							<a
+								href={url}
+								class="capitalize italic hover:bg-base-200 hover:text-base-content">
+								{name}</a>
+						</li>
+					{/each}
+					<!-- <li>
 						<a
 							href="/development"
 							class="italic hover:bg-base-200 hover:text-base-content">
@@ -85,7 +91,7 @@
 							class="italic hover:bg-base-200 hover:text-base-content"
 							><span class="mr-2 w-4"><Audiovisual /></span
 							>Audiovisual</a>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 			<!-- DROPDOWN WRITING -->
@@ -113,7 +119,7 @@
 				data-tally-emoji-text="🚀"
 				data-tally-emoji-animation="wave"
 				data-tally-auto-close="5000">
-				Say Hi!
+				{menu.contact}
 			</button>
 		</div>
 	</div>

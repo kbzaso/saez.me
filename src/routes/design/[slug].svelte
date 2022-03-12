@@ -19,13 +19,37 @@
 <script>
 	import Breadcrums from '../../components/Breadcrums.svelte';
 	import InfoBox from '../../components/InfoBox.svelte';
+	import SvelteSeo from 'svelte-seo';
 	export let projects;
 </script>
 
 <Breadcrums />
 <article class="contenedor flex flex-col lg:flex-row">
-	{#each projects as { name, content, timeline, myrole, technologies, deliverables }}
+	{#each projects as { name, content, timeline, myrole, technologies, deliverables, extract, slug, image }}
 		<InfoBox {timeline} {technologies} {deliverables} {myrole} />
+
+		<SvelteSeo
+			twitter={{
+				site: '@kbzaso',
+				title: name,
+				description: extract,
+				image: image[0].url,
+				imageAlt: 'SEO Card',
+			}}
+			openGraph={{
+				title: name,
+				description: extract,
+				type: 'article',
+				url: `https://www.saez.me/design/${slug}`,
+				images: [
+					{
+						url: image[0].url,
+						width: 850,
+						height: 650,
+						alt: 'SEO Card',
+					},
+				],
+			}} />
 		<main class="lectura mx-auto mt-8 max-w-prose">
 			<h3 class="text-4xl italic">
 				{name}

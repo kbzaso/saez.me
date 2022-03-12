@@ -38,11 +38,6 @@
 	});
 </script>
 
-<head>
-	<title
-		>Alejandro Sáez | Frontend Dev, UX/UI, Multimedia Designer</title>
-</head>
-
 <div class="drawer drawer-end h-screen w-full">
 	<input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
 	<div class="drawer-content">
