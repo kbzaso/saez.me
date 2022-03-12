@@ -34,6 +34,7 @@
 				title: name,
 				description: extract,
 				image: image[0].url,
+				card: 'summary_large_image',
 				imageAlt: 'SEO Card',
 			}}
 			openGraph={{

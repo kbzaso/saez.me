@@ -14,6 +14,7 @@
 	twitter={{
 		site: '@kbzaso',
 		title: 'Welcome to my digital mind space',
+		card: 'summary_large_image',
 		description:
 			'Alejandro Sáez | Frontend Dev, UX/UI and Multimedia Designer',
 		image: SEO_CARD_IMAGE,

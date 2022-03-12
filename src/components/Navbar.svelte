@@ -9,7 +9,7 @@
 
 <nav
 	class="navbar sticky top-0 z-10 mx-auto mb-2 max-w-screen-2xl bg-base-200 pt-6  text-neutral-content">
-	<div class="mx-2 flex-1 px-2">
+	<div class="flex-1">
 		<div
 			class={$page.url.pathname !== '/'
 				? 'tooltip tooltip-bottom'
@@ -73,25 +73,6 @@
 								{name}</a>
 						</li>
 					{/each}
-					<!-- <li>
-						<a
-							href="/development"
-							class="italic hover:bg-base-200 hover:text-base-content">
-							<span class="mr-2 w-4"><Js /></span> Development</a>
-					</li>
-					<li>
-						<a
-							href="/design"
-							class="italic hover:bg-base-200 hover:text-base-content">
-							<span class="mr-2 w-4"><Pencil /></span>Design</a>
-					</li>
-					<li>
-						<a
-							href="/audiovisual"
-							class="italic hover:bg-base-200 hover:text-base-content"
-							><span class="mr-2 w-4"><Audiovisual /></span
-							>Audiovisual</a>
-					</li> -->
 				</ul>
 			</div>
 			<!-- DROPDOWN WRITING -->
@@ -126,11 +107,11 @@
 
 	<!-- HAMBURGER MENU -->
 	<label
-		class="btn-outline btn btn-circle mr-6 lg:hidden"
+		class="btn-outline btn btn-circle lg:hidden"
 		for="my-drawer-4">
 		<!-- hamburger icon -->
 		<svg
-			class="swap-ON fill-current"
+			class="swap-on fill-current"
 			xmlns="http://www.w3.org/2000/svg"
 			width="32"
 			height="32"

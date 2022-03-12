@@ -30,6 +30,7 @@
 		title: 'I just belive in HTML, CSS and JavaScript',
 		description:
 			'Here is a portfolio of my frontend development work.',
+		card: 'summary_large_image',
 		image: SEO_CARD_IMAGE,
 		imageAlt: 'SEO Card',
 	}}

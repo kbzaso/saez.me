@@ -30,6 +30,7 @@
 		title:
 			'Design is not just what it looks like and feels like. Design is how it works.',
 		description: 'Here is a portfolio of my design work.',
+		card: 'summary_large_image',
 		image: SEO_CARD_IMAGE,
 		imageAlt: 'SEO Card',
 	}}
