@@ -3,7 +3,7 @@
 	import SvelteSeo from 'svelte-seo';
 
 	const SEO_CARD_IMAGE =
-		'https://media.graphcms.com/output=format:webp/resize=height:800,fit:max/tZGYD890SemYXcQRwmIg';
+		'https://media.graphcms.com/output=format:jpg/tZGYD890SemYXcQRwmIg';
 </script>
 
 <head>
