@@ -19,7 +19,7 @@
 	import SvelteSeo from 'svelte-seo';
 	export let projects;
 	const SEO_CARD_IMAGE =
-		'https://media.graphcms.com/output=format:webp/tZGYD890SemYXcQRwmIg';
+		'https://media.graphcms.com/output=format:jpg/tZGYD890SemYXcQRwmIg';
 	const DESIGN_PHOTO =
 		'https://media.graphcms.com/output=format:webp/resize=height:800,fit:max/5vKTc2iKT9OMqCymwIyf';
 </script>
