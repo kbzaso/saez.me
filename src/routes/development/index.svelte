@@ -97,7 +97,7 @@
 			</p>
 		</div>
 	</article>
-	<h2 class="mt-16 text-4xl italic text-base-content">
+	<h2 class="mt-36 text-4xl italic text-base-content">
 		Development projects
 	</h2>
 	<p class="lectura mt-2">
