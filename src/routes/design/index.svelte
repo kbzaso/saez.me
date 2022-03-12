@@ -18,37 +18,39 @@
 	import Works from '../../components/Works.svelte';
 	import SvelteSeo from 'svelte-seo';
 	export let projects;
-	const SEO_CARD_IMAGE =
-		'https://media.graphcms.com/output=format:jpg/tZGYD890SemYXcQRwmIg';
+	import { SEO_CARD_IMAGE } from '$lib/info';
 	const DESIGN_PHOTO =
 		'https://media.graphcms.com/output=format:webp/resize=height:800,fit:max/5vKTc2iKT9OMqCymwIyf';
 </script>
 
-<SvelteSeo
-	twitter={{
-		site: '@kbzaso',
-		title:
-			'Design is not just what it looks like and feels like. Design is how it works.',
-		description: 'Here is a portfolio of my design work.',
-		card: 'summary_large_image',
-		image: SEO_CARD_IMAGE,
-		imageAlt: 'SEO Card',
-	}}
-	openGraph={{
-		title:
-			'Design is not just what it looks like and feels like. Design is how it works.',
-		description: 'Here is a portfolio of my design work.',
-		type: 'article',
-		url: `https://www.saez.me/design`,
-		images: [
-			{
-				url: SEO_CARD_IMAGE,
-				width: 850,
-				height: 650,
-				alt: 'SEO Card',
-			},
-		],
-	}} />
+<svelte:head>
+	<title>Design | Alejandro Sáez</title>
+	<SvelteSeo
+		twitter={{
+			site: '@kbzaso',
+			title:
+				'Design is not just what it looks like and feels like. Design is how it works.',
+			description: 'Here is a portfolio of my design work.',
+			card: 'summary_large_image',
+			image: SEO_CARD_IMAGE,
+			imageAlt: 'SEO Card',
+		}}
+		openGraph={{
+			title:
+				'Design is not just what it looks like and feels like. Design is how it works.',
+			description: 'Here is a portfolio of my design work.',
+			type: 'article',
+			url: `https://www.saez.me/design`,
+			images: [
+				{
+					url: SEO_CARD_IMAGE,
+					width: 850,
+					height: 650,
+					alt: 'SEO Card',
+				},
+			],
+		}} />
+</svelte:head>
 
 <section class="contenedor mt-6">
 	<main class="mx-auto flex h-96 flex-col justify-center">

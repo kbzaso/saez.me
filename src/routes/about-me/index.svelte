@@ -1,10 +1,12 @@
 <script>
 	import SocialIcons from '../../components/SocialIcons.svelte';
 	import SvelteSeo from 'svelte-seo';
-	const CITY_PHOTO =
-		'https://media.graphcms.com/output=format:webp/resize=height:800,fit:max/BzsYO2gTP617gt5UZMR8';
+	import { SEO_CARD_IMAGE, CITY_PHOTO } from '$lib/info';
 </script>
 
+<svelte:head>
+	<title>About me | Alejandro Sáez</title>
+</svelte:head>
 <SvelteSeo
 	twitter={{
 		site: '@kbzaso',
@@ -12,8 +14,7 @@
 			'I’m a Chilean creative currently based in Santiago, Chile.',
 		description:
 			'A freelance creative, nowadays working with growing businesses in their digital transformation.',
-		image:
-			'https://media.graphcms.com/output=format:webp/resize=height:800,fit:max/tZGYD890SemYXcQRwmIg',
+		image: SEO_CARD_IMAGE,
 		imageAlt: 'SEO card',
 	}}
 	openGraph={{
@@ -25,7 +26,7 @@
 		type: 'website',
 		images: [
 			{
-				url: 'https://media.graphcms.com/output=format:webp/resize=height:800,fit:max/tZGYD890SemYXcQRwmIg',
+				url: SEO_CARD_IMAGE,
 				width: 850,
 				height: 650,
 				alt: 'SEO card',

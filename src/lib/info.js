@@ -25,3 +25,9 @@ export const home = {
 	photo:
 		'https://media.graphcms.com/output=format:webp/resize=height:800,fit:max/4ofz9qCSQmRlx2TMjTjI',
 };
+
+export const SEO_CARD_IMAGE =
+	'https://media.graphcms.com/output=format:jpg/tZGYD890SemYXcQRwmIg';
+
+export const CITY_PHOTO =
+	'https://media.graphcms.com/output=format:webp/resize=height:800,fit:max/BzsYO2gTP617gt5UZMR8';

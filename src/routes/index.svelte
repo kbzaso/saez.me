@@ -2,14 +2,13 @@
 	import Hero from '../components/Hero.svelte';
 	import SvelteSeo from 'svelte-seo';
 
-	const SEO_CARD_IMAGE =
-		'https://media.graphcms.com/output=format:jpg/tZGYD890SemYXcQRwmIg';
+	import { SEO_CARD_IMAGE } from '$lib/info';
 </script>
 
-<head>
+<svelte:head>
 	<title
 		>Alejandro Sáez | Frontend Dev, UX/UI and Multimedia Designer</title>
-</head>
+</svelte:head>
 <SvelteSeo
 	twitter={{
 		site: '@kbzaso',

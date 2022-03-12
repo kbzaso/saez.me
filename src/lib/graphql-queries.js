@@ -58,7 +58,7 @@ export const audiovisualQuery = gql`
 
 export const slugQuery = gql`
 	query MyProject($slug: String!) {
-		projects(where: { slug: $slug }) {
+		project(where: { slug: $slug }) {
 			id
 			name
 			slug
@@ -91,7 +91,7 @@ export const pagesQuery = gql`
 
 export const pagesSlugQuery = gql`
 	query MyPages($slug: String!) {
-		pages(where: { slug: $slug }) {
+		page(where: { slug: $slug }) {
 			title
 			content {
 				html
