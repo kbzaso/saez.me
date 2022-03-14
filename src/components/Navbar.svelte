@@ -1,7 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import FaCaretDown from 'svelte-icons/fa/FaCaretDown.svelte';
-	import Swap from './Swap.svelte';
+	import ThemeSelect from './Theme-select.svelte';
 	export let pages;
 	export let segment;
 	import { menu, projects } from '$lib/info';
@@ -29,7 +29,7 @@
 		</div>
 	</div>
 	<div class="mx-2 px-2">
-		<Swap />
+		<ThemeSelect />
 		<div class="ml-4 hidden lg:flex lg:items-stretch lg:gap-4">
 			<a
 				href={menu.home.url}

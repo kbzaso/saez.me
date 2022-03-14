@@ -31,7 +31,7 @@ const config = {
 		themes: [
 			'dracula',
 			{
-				dark: {
+				fantasy: {
 					...require('daisyui/src/colors/themes')[
 						'[data-theme=fantasy]'
 					],

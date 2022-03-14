@@ -1,8 +1,19 @@
-<label class="swap swap-rotate">
+<script>
+	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
+	let onLoad = false;
+	onMount(() => {
+		document.querySelector('#swap').classList.remove('opacity-0');
+		onLoad = true;
+		console.log(onLoad);
+	});
+</script>
+
+<label class="swap swap-rotate opacity-0 transition" id="swap">
 	<!-- this hidden checkbox controls the state -->
 	<input
 		type="checkbox"
-		data-toggle-theme="fantasy,dracula"
+		data-toggle-theme="dracula,fantasy"
 		data-act-class="ACTIVECLASS" />
 
 	<!-- sun icon -->
