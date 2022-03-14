@@ -107,11 +107,11 @@
 
 	<!-- HAMBURGER MENU -->
 	<label
-		class="btn-outline btn btn-circle lg:hidden"
+		class="btn-base-content btn-outline btn btn-circle lg:hidden"
 		for="my-drawer-4">
 		<!-- hamburger icon -->
 		<svg
-			class="swap-on fill-current"
+			class="swap-on fill-base-content"
 			xmlns="http://www.w3.org/2000/svg"
 			width="32"
 			height="32"
