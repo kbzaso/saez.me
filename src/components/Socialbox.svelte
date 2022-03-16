@@ -3,6 +3,7 @@
 	import FaBehance from 'svelte-icons/fa/FaBehance.svelte';
 	import FaDribbble from 'svelte-icons/fa/FaDribbble.svelte';
 	import FaGithub from 'svelte-icons/fa/FaGithub.svelte';
+	import FaFilePdf from 'svelte-icons/fa/FaFilePdf.svelte';
 </script>
 
 <div
@@ -34,6 +35,21 @@
 			target="_blank"
 			class="w-10 p-2 text-accent transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-accent-focus">
 			<FaDribbble />
+		</a>
+	</div>
+</div>
+
+<div
+	class="mt-8 w-4/12 rounded bg-neutral p-4 transition duration-150 ease-in-out hover:rotate-2 hover:scale-110 hover:bg-neutral-focus hover:shadow-lg lg:w-auto">
+	<h3 class="mb-2 text-lg text-neutral-content md:text-center">
+		My CV:
+	</h3>
+	<div class="flex w-full justify-center">
+		<a
+			href="https://drive.google.com/file/d/1_2oiPDYiY852CEeDozuPAz5CnAH_sCsR/view?usp=sharing"
+			target="_blank"
+			class="w-10 p-2 text-accent transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-accent-focus">
+			<FaFilePdf />
 		</a>
 	</div>
 </div>

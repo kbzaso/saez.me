@@ -1,6 +1,6 @@
 <script>
 	import Socialbox from './Socialbox.svelte';
-	import Cv from './Cv.svelte';
+
 	import { home } from '$lib/info';
 </script>
 
@@ -23,7 +23,6 @@
 			</p>
 			<div class="flex w-full gap-4">
 				<Socialbox />
-				<Cv />
 			</div>
 		</div>
 
