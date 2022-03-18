@@ -3,6 +3,7 @@
 	export let image = '';
 	export let extract = '';
 	export let slug = '';
+	export let worktype = '';
 	export let section;
 	export let category;
 	import { marked } from 'marked';
@@ -10,7 +11,7 @@
 
 <div
 	class="card w-full bg-base-300 shadow-xl transition duration-150 ease-in-out hover:rotate-2 hover:scale-105 hover:bg-neutral-focus hover:shadow-lg">
-	<a href={`${section}/${slug}`}>
+	<a href={`/${worktype}/${slug}`}>
 		<figure>
 			<img src={image[0].url} alt={name} />
 		</figure>

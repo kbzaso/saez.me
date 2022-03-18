@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	let path = $page.url.pathname.split('/');
 	let [firstElement, ...rest] = path;
+	import ArrowLeft24 from 'carbon-icons-svelte/lib/ArrowLeft24';
 </script>
 
 <div class="breadcrumbs mx-auto">

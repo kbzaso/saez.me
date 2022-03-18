@@ -11,7 +11,7 @@ export const homeQuery = gql`
 
 export const developmentQuery = gql`
 	query MyDevelopmentProjects {
-		projects(where: { worktype: Development }) {
+		projects(where: { worktype: development }) {
 			id
 			name
 			slug
@@ -27,7 +27,7 @@ export const developmentQuery = gql`
 
 export const designQuery = gql`
 	query MyDesignProjects {
-		projects(where: { worktype: Design }) {
+		projects(where: { worktype: design }) {
 			id
 			name
 			slug
@@ -37,13 +37,14 @@ export const designQuery = gql`
 			date
 			extract
 			category
+			worktype
 		}
 	}
 `;
 
 export const audiovisualQuery = gql`
 	query MyAudiovisualProjects {
-		projects(where: { worktype: Audiovisual }) {
+		projects(where: { worktype: audiovisual }) {
 			id
 			name
 			slug

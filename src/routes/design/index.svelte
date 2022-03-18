@@ -102,14 +102,16 @@
 		Case Studies
 	</h2>
 	<aside
+		id="projects"
 		class="my-6 grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-8 md:grid-cols-[repeat(auto-fit,minmax(24rem,24rem))]">
-		{#each projects as { name, image, slug, extract, category }}
+		{#each projects as { name, image, slug, extract, category, worktype }}
 			<Works
 				{name}
 				{image}
 				{slug}
 				{extract}
 				{category}
+				{worktype}
 				section="design" />
 		{/each}
 	</aside>
