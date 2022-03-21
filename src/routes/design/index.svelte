@@ -105,14 +105,7 @@
 		id="projects"
 		class="my-6 grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-8 md:grid-cols-[repeat(auto-fit,minmax(24rem,24rem))]">
 		{#each projects as { name, image, slug, extract, category, worktype }}
-			<Works
-				{name}
-				{image}
-				{slug}
-				{extract}
-				{category}
-				{worktype}
-				section="design" />
+			<Works {name} {image} {slug} {extract} {category} {worktype} />
 		{/each}
 	</aside>
 </section>

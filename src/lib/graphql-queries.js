@@ -21,6 +21,7 @@ export const developmentQuery = gql`
 			date
 			extract
 			category
+			worktype
 		}
 	}
 `;

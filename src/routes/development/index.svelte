@@ -110,15 +110,8 @@
 <aside class="contenedor mt-6">
 	<div
 		class="mt-4 mb-8 grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-8 md:grid-cols-[repeat(auto-fit,minmax(24rem,24rem))]">
-		{#each projects as { name, description, image, slug, extract, category }}
-			<Works
-				{name}
-				{description}
-				{image}
-				{slug}
-				{extract}
-				{category}
-				section="development" />
+		{#each projects as { name, image, slug, extract, category, worktype }}
+			<Works {name} {worktype} {image} {slug} {extract} {category} />
 		{/each}
 	</div>
 </aside>
