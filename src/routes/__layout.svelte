@@ -16,16 +16,18 @@
 
 <script>
 	import '../app.css';
-	import PageTransition from '../components/PageTransition.svelte';
 	import { page } from '$app/stores';
-
-	import MobileNav from '../components/MobileNav.svelte';
-	import Navbar from '../components/Navbar.svelte';
-	import Footer from '../components/Footer.svelte';
 	import { onMount } from 'svelte';
 	import { afterNavigate } from '$app/navigation';
 	import { themeChange } from 'theme-change';
+
+	import PageTransition from '../components/PageTransition.svelte';
+	import MobileNav from '../components/MobileNav.svelte';
+	import Navbar from '../components/Navbar.svelte';
+	import Footer from '../components/Footer.svelte';
+
 	export let pages;
+	let scroll;
 
 	afterNavigate(() => {
 		document
@@ -38,11 +40,13 @@
 	});
 </script>
 
+<svelte:window bind:scrollY={scroll} />
+
 <div class="drawer drawer-end h-screen w-full">
 	<input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
 	<div class="drawer-content">
 		<Navbar {pages} segment={$page.url.pathname} />
-		<div class="container mx-auto flex min-h-screen flex-col">
+		<div class="flex min-h-screen flex-col">
 			<div class="main flex-grow">
 				<PageTransition refresh={$page.url.pathname}>
 					<slot />

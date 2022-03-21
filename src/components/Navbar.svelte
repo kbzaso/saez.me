@@ -12,7 +12,7 @@
 	<div class="flex-1">
 		<div
 			class={$page.url.pathname !== '/'
-				? 'tooltip tooltip-bottom'
+				? 'tooltip tooltip-right'
 				: ''}
 			data-tip="Back to home 🤚">
 			<a
