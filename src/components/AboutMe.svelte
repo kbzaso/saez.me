@@ -1,5 +1,4 @@
 <script>
-	export let title = '';
 	export let cta = '';
 	export let content = '';
 </script>

@@ -1,11 +1,7 @@
 export const menu = {
-	home: {
-		name: 'home',
-		url: '/',
-	},
 	about: {
 		name: 'about me',
-		url: '/about-me',
+		url: '/',
 	},
 	contact: 'Say Hi!',
 };

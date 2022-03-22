@@ -26,13 +26,6 @@
 					points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" /></svg>
 		</label>
 		<p class="uppercase tracking-widest">🖐 Hello there</p>
-		<li class="mt-6">
-			<a
-				href={menu.home.url}
-				on:click={closeDrawer}
-				class="text-4xl font-extrabold capitalize italic leading-10 text-base-content underline decoration-4 "
-				>{menu.home.name}</a>
-		</li>
 		<li>
 			<a
 				href={menu.about.url}

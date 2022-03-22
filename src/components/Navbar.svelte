@@ -1,6 +1,5 @@
 <script>
 	import { page } from '$app/stores';
-	import FaCaretDown from 'svelte-icons/fa/FaCaretDown.svelte';
 	import ThemeSelect from './Theme-select.svelte';
 	export let pages;
 	export let segment;
@@ -8,7 +7,8 @@
 </script>
 
 <nav
-	class="navbar sticky top-0 z-10 mx-auto mb-2 max-w-screen-2xl bg-base-200 pt-6  text-neutral-content">
+	class="absolute top-0 z-10 flex w-full pr-8 pl-2 pt-4 text-neutral-content md:px-8">
+	<!-- LOGO -->
 	<div class="flex-1">
 		<div
 			class={$page.url.pathname !== '/'
@@ -28,90 +28,21 @@
 			</a>
 		</div>
 	</div>
-	<div class="mx-2 px-2">
-		<ThemeSelect />
-		<div class="ml-4 hidden lg:flex lg:items-stretch lg:gap-4">
-			<a
-				href={menu.home.url}
-				class="{segment === '/'
-					? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
-					: 'btn-outline'} btn rounded-btn btn-sm bg-base-200 text-xl capitalize italic transition ease-in-out hover:shadow-lg"
-				>{menu.home.name}</a>
-			<a
-				href={menu.about.url}
-				class="{segment === '/about-me'
-					? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
-					: 'btn-outline'} btn rounded-btn btn-sm bg-base-200 text-xl capitalize italic transition ease-in-out hover:shadow-lg "
-				>{menu.about.name}</a>
-			{#each pages as { title, slug }}
-				<a
-					href={`/${slug}`}
-					class="{segment === `/${slug}`
-						? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
-						: 'btn-outline'} btn rounded-btn btn-sm bg-base-200 text-xl capitalize italic transition ease-in-out hover:shadow-lg">
-					{title}
-				</a>
-			{/each}
 
-			<div class="dropdown">
-				<span
-					tabindex="0"
-					class="{segment.includes('/development') ||
-					segment.includes('/design') ||
-					segment.includes('/audiovisual')
-						? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
-						: 'btn-outline'} btn rounded-btn btn-sm bg-base-200 text-xl capitalize italic transition ease-in-out hover:shadow-lg">
-					<span class="mr-2 w-4"><FaCaretDown /></span> Projects</span>
-				<ul
-					tabindex="0"
-					class=" dropdown-content menu rounded-box mt-4 w-52 bg-base-content p-2 text-base-200 shadow-lg">
-					{#each projects as { name, url, icon }}
-						<li>
-							<a
-								href={url}
-								class="capitalize italic hover:bg-base-200 hover:text-base-content">
-								{name}</a>
-						</li>
-					{/each}
-				</ul>
-			</div>
-			<!-- DROPDOWN WRITING -->
-			<!-- <div class="dropdown">
-				<span
-					tabindex="0"
-					class="{$page.url.pathname.includes('/blog') ||
-					$page.url.pathname.includes('/journal')
-						? 'bg-accent text-neutral hover:text-white'
-						: 'btn-outline'} btn btn-accent rounded-btn btn-sm transition ease-in-out hover:shadow-lg hover:shadow-cyan-500/50"
-					>Writing</span>
-				<ul
-					tabindex="0"
-					class="dropdown-content menu rounded-box mt-4 w-52 bg-secondary p-2 shadow">
-					<li><a href="/blog">Blog</a></li>
-					<li><a href="/journal">Journal</a></li>
-				</ul>
-			</div> -->
-
-			<button
-				type="button"
-				class="btn btn-accent rounded-btn btn-sm text-xl capitalize italic transition ease-in-out"
-				data-tally-open="wLo013"
-				data-tally-overlay="1"
-				data-tally-emoji-text="🚀"
-				data-tally-emoji-animation="wave"
-				data-tally-auto-close="5000">
-				{menu.contact}
-			</button>
+	{#if $page.url.pathname !== '/'}
+		<!-- THEME CHANGER -->
+		<div class="mt-1 mr-4  flex-none">
+			<ThemeSelect />
 		</div>
-	</div>
+	{/if}
 
 	<!-- HAMBURGER MENU -->
 	<label
-		class="btn-base-content btn-outline btn btn-circle lg:hidden"
+		class="btn-base-content btn-outline btn btn-circle flex-none bg-base-200 "
 		for="my-drawer-4">
 		<!-- hamburger icon -->
 		<svg
-			class="swap-on fill-base-content"
+			class="swap-on fill-base-content hover:fill-base-200"
 			xmlns="http://www.w3.org/2000/svg"
 			width="32"
 			height="32"
