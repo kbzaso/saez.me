@@ -26,8 +26,6 @@
 	import Navbar from '../components/Navbar.svelte';
 	import Footer from '../components/Footer.svelte';
 
-	export let pages;
-
 	let load = false;
 
 	afterNavigate(() => {
@@ -45,19 +43,19 @@
 <div class="drawer drawer-end h-screen w-full">
 	<input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
 	<div class="drawer-content">
-		<Navbar {pages} segment={$page.url.pathname} />
-		{#if load}
-			<div class="flex min-h-screen flex-col">
-				<div class="main flex-grow">
-					<PageTransition refresh={$page.url.pathname}>
-						<slot />
-					</PageTransition>
-				</div>
-				<Footer />
+		<Navbar />
+		<!-- {#if load} -->
+		<div class="flex min-h-screen flex-col">
+			<div class="main flex-grow">
+				<PageTransition refresh={$page.url.pathname}>
+					<slot />
+				</PageTransition>
 			</div>
-		{:else}
+			<Footer />
+		</div>
+		<!-- {:else}
 			LOADING
-		{/if}
+		{/if} -->
 	</div>
 	<MobileNav />
 </div>

@@ -1,6 +1,7 @@
 <script>
 	import { slide } from 'svelte/transition';
 	import { menu, projects } from '$lib/info';
+	import SocialBox from '../components/Socialbox.svelte';
 	let isOpen = false;
 	const toggle = () => (isOpen = !isOpen);
 	const closeDrawer = () => {
@@ -73,6 +74,7 @@
 				class="text-4xl font-extrabold italic leading-10 text-base-content underline decoration-accent decoration-4"
 				on:click={closeDrawer}>{menu.contact}</button>
 		</li>
+		<SocialBox />
 	</ul>
 </div>
 

@@ -6,7 +6,7 @@
 	import FaFilePdf from 'svelte-icons/fa/FaFilePdf.svelte';
 </script>
 
-<div
+<!-- <div
 	class="mt-8 w-8/12 rounded bg-neutral p-4 transition duration-150 ease-in-out hover:rotate-2 hover:scale-110 hover:bg-neutral-focus hover:shadow-lg lg:w-auto">
 	<h3 class="mb-2 text-lg text-neutral-content md:text-center">
 		You can follow me on:
@@ -37,19 +37,14 @@
 			<FaDribbble />
 		</a>
 	</div>
-</div>
+</div> -->
 
-<div
-	class="mt-8 w-4/12 rounded bg-neutral p-4 transition duration-150 ease-in-out hover:rotate-2 hover:scale-110 hover:bg-neutral-focus hover:shadow-lg lg:w-auto">
-	<h3 class="mb-2 text-lg text-neutral-content md:text-center">
-		My CV:
-	</h3>
-	<div class="flex w-full justify-center">
-		<a
-			href="https://drive.google.com/file/d/1_2oiPDYiY852CEeDozuPAz5CnAH_sCsR/view?usp=sharing"
-			target="_blank"
-			class="w-10 p-2 text-accent transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-accent-focus">
-			<FaFilePdf />
-		</a>
+<a
+	class="btn btn-primary absolute bottom-10 flex text-lg uppercase tracking-widest"
+	target="_blank"
+	href="https://drive.google.com/file/d/1_2oiPDYiY852CEeDozuPAz5CnAH_sCsR/view?usp=sharing">
+	<div class="mr-4 w-5">
+		<FaFilePdf />
 	</div>
-</div>
+	<p>Here is my CV:</p>
+</a>

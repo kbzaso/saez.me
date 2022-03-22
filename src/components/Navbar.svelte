@@ -1,8 +1,6 @@
 <script>
 	import { page } from '$app/stores';
 	import ThemeSelect from './Theme-select.svelte';
-	export let pages;
-	export let segment;
 	import { menu, projects } from '$lib/info';
 </script>
 
@@ -17,9 +15,9 @@
 			data-tip="Back to home 🤚">
 			<a
 				href="/"
-				class="btn border-0 bg-transparent hover:bg-transparent">
+				class="btn border-0 bg-transparent  hover:bg-transparent">
 				<svg
-					class="h-16 fill-base-content transition duration-150 ease-in-out hover:scale-110"
+					class="h-16 fill-base-content drop-shadow-lg transition duration-150 ease-in-out hover:scale-110"
 					viewBox="0 0 661 868"
 					version="1.1"
 					xmlns="http://www.w3.org/2000/svg"
