@@ -3,7 +3,7 @@
 </script>
 
 <footer
-	class="my-8 mx-4 flex flex-col items-center justify-between rounded-lg p-4 text-neutral sm:flex-row md:mt-0 lg:mx-auto lg:w-fit">
+	class="my-8 mx-4 flex flex-col items-center justify-between rounded-lg p-4 text-neutral sm:flex-row  lg:mx-auto lg:w-fit">
 	<div class="flex items-center">
 		<svg
 			class="h-12 fill-neutral transition duration-150 ease-in-out hover:fill-secondary"

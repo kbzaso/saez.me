@@ -30,4 +30,4 @@ export const SEO_CARD_IMAGE =
 	'https://media.graphcms.com/output=format:jpg/tZGYD890SemYXcQRwmIg';
 
 export const CITY_PHOTO =
-	'https://media.graphcms.com/output=format:webp/resize=height:800,fit:max/BzsYO2gTP617gt5UZMR8';
+	'https://media.graphcms.com/PRlSyQJCQpuK2kTPLz9v?_ga=2.12565949.805891030.1647898046-2006596507.1646768669';

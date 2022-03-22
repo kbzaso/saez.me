@@ -1,6 +1,18 @@
 import { gql } from 'graphql-request';
 
 export const homeQuery = gql`
+	query getHome {
+		homes() {
+			content {
+				html
+			}
+			title
+			cta
+		}
+	}
+  `;
+
+export const assetQuery = gql`
 	query MyAssets {
 		assets {
 			fileName

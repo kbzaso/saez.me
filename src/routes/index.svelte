@@ -1,5 +1,24 @@
+<script context="module">
+	import { client } from '$lib/graphql-client';
+	import { homeQuery } from '$lib/graphql-queries';
+
+	export const load = async () => {
+		const { homes } = await client.request(homeQuery);
+
+		return {
+			status: 200,
+			props: {
+				homes,
+			},
+		};
+	};
+</script>
+
 <script>
+	export let homes;
+	const { title, content, cta } = homes[0];
 	import Hero from '../components/Hero.svelte';
+	import AboutMe from '../components/AboutMe.svelte';
 	import SvelteSeo from 'svelte-seo';
 
 	import { SEO_CARD_IMAGE } from '$lib/info';
@@ -35,3 +54,4 @@
 		],
 	}} />
 <Hero />
+<AboutMe {title} {content} {cta} />

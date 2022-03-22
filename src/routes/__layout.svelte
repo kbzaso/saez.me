@@ -26,7 +26,7 @@
 	import Navbar from '../components/Navbar.svelte';
 	import Footer from '../components/Footer.svelte';
 
-	export let pages;
+	// export let pages;
 	let scroll;
 
 	afterNavigate(() => {
@@ -42,18 +42,19 @@
 
 <svelte:window bind:scrollY={scroll} />
 
-<div class="drawer drawer-end h-screen w-full">
+<!-- <div class="drawer drawer-end h-screen w-full">
 	<input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-	<div class="drawer-content">
-		<Navbar {pages} segment={$page.url.pathname} />
-		<div class="flex min-h-screen flex-col">
-			<div class="main flex-grow">
-				<PageTransition refresh={$page.url.pathname}>
-					<slot />
-				</PageTransition>
-			</div>
-			<Footer />
-		</div>
+	<div class="drawer-content"> -->
+<!-- <Navbar {pages} segment={$page.url.pathname} /> -->
+
+<div class="flex min-h-screen flex-col">
+	<div class="main flex-grow">
+		<PageTransition refresh={$page.url.pathname}>
+			<slot />
+		</PageTransition>
 	</div>
-	<MobileNav />
+	<Footer />
 </div>
+<!-- </div> -->
+<!-- <MobileNav /> -->
+<!-- </div> -->

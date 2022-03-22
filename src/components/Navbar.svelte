@@ -35,20 +35,20 @@
 				href={menu.home.url}
 				class="{segment === '/'
 					? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
-					: 'btn-outline'} btn rounded-btn btn-md bg-base-200 text-xl capitalize italic transition ease-in-out hover:shadow-lg"
+					: 'btn-outline'} btn rounded-btn btn-sm bg-base-200 text-xl capitalize italic transition ease-in-out hover:shadow-lg"
 				>{menu.home.name}</a>
 			<a
 				href={menu.about.url}
 				class="{segment === '/about-me'
 					? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
-					: 'btn-outline'} btn rounded-btn btn-md bg-base-200 text-xl capitalize italic transition ease-in-out hover:shadow-lg "
+					: 'btn-outline'} btn rounded-btn btn-sm bg-base-200 text-xl capitalize italic transition ease-in-out hover:shadow-lg "
 				>{menu.about.name}</a>
 			{#each pages as { title, slug }}
 				<a
 					href={`/${slug}`}
 					class="{segment === `/${slug}`
 						? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
-						: 'btn-outline'} btn rounded-btn btn-md bg-base-200 text-xl capitalize italic transition ease-in-out hover:shadow-lg">
+						: 'btn-outline'} btn rounded-btn btn-sm bg-base-200 text-xl capitalize italic transition ease-in-out hover:shadow-lg">
 					{title}
 				</a>
 			{/each}
@@ -60,7 +60,7 @@
 					segment.includes('/design') ||
 					segment.includes('/audiovisual')
 						? 'bg-neutral text-white hover:text-neutral hover:bg-transparent'
-						: 'btn-outline'} btn rounded-btn btn-md bg-base-200 text-xl capitalize italic transition ease-in-out hover:shadow-lg">
+						: 'btn-outline'} btn rounded-btn btn-sm bg-base-200 text-xl capitalize italic transition ease-in-out hover:shadow-lg">
 					<span class="mr-2 w-4"><FaCaretDown /></span> Projects</span>
 				<ul
 					tabindex="0"
@@ -94,7 +94,7 @@
 
 			<button
 				type="button"
-				class="btn btn-accent rounded-btn btn-md text-xl capitalize italic transition ease-in-out"
+				class="btn btn-accent rounded-btn btn-sm text-xl capitalize italic transition ease-in-out"
 				data-tally-open="wLo013"
 				data-tally-overlay="1"
 				data-tally-emoji-text="🚀"
