@@ -74,7 +74,7 @@
 	class="h-96 bg-cover bg-fixed"
 	style={`background-image: url(${img})`} /> -->
 
-<article class="contenedor flex flex-col lg:flex-row">
+<article class="contenedor mt-32 flex flex-col lg:flex-row">
 	<InfoBox {timeline} {technologies} {deliverables} {myrole} />
 	<main class="lectura mx-auto mt-8 max-w-prose">
 		<h3 class="text-4xl italic">

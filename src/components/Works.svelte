@@ -4,7 +4,6 @@
 	export let extract = '';
 	export let slug = '';
 	export let worktype = '';
-	export let section;
 	export let category;
 	import { marked } from 'marked';
 </script>
