@@ -15,18 +15,19 @@
 
 	<button
 		type="button"
-		class="text-left text-2xl text-secondary underline
-                decoration-cyan-500
+		class="text-left text-xl text-secondary underline decoration-cyan-500
                 decoration-solid
                 decoration-2
-
                 hover:text-primary
                 hover:decoration-primary
                 hover:decoration-wavy
-                hover:decoration-1"
+                hover:decoration-1
+                md:text-2xl"
 		data-tally-open="wLo013"
-		data-tally-overlay="1"
-		data-tally-emoji-text="🚀"
+		data-tally-layout="modal"
+		data-tally-width="375"
+		data-tally-hide-title="1"
+		data-tally-emoji-text="👋"
 		data-tally-emoji-animation="wave"
-		data-tally-auto-close="5000">{cta}</button>
+		data-tally-auto-close="2000">{cta}</button>
 </main>
