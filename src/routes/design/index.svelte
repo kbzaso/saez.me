@@ -52,40 +52,41 @@
 		}} />
 </svelte:head>
 
+<article
+	class="mt-28 flex flex-col gap-8 md:flex-row lg:mx-auto 2xl:container">
+	<figure class="md:w-1/2">
+		<img
+			class="mb-2 h-96 w-full rounded-none object-cover shadow-lg lg:rounded-tr-lg lg:rounded-br-lg xl:rounded-none"
+			src={DESIGN_PHOTO}
+			alt="A pen above a paper" />
+		<figcaption class="text-center">
+			Photo by <a
+				class="underline decoration-2"
+				target="_blank"
+				href="https://unsplash.com/@medbadrc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+				>Med Badr Chemmaoui</a>
+			on
+			<a
+				target="_blank"
+				class="underline decoration-2"
+				href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+				>Unsplash</a>
+		</figcaption>
+	</figure>
+	<div class="flex items-center px-20 md:w-1/2">
+		<p
+			class="lectura first-letter:float-left
+		first-letter:mr-3 first-letter:text-7xl first-letter:font-bold
+		first-letter:text-accent first-line:uppercase first-line:tracking-widest">
+			Questions are my secrete weapon. I always try to identify deeper
+			motivations, gain clarity, challenge assumptions, and
+			demonstrate curiosity and empathy. Like a doctor, I try to stay
+			the most possible time in the diagnosis phase, so I can identify
+			the real problems and give meaningful solutions.
+		</p>
+	</div>
+</article>
 <section class="contenedor mt-32">
-	<article class="mt-8 flex flex-col gap-8 md:flex-row">
-		<figure class="md:w-1/2">
-			<img
-				class="mb-2 h-96 w-full rounded-lg object-cover"
-				src={DESIGN_PHOTO}
-				alt="A pen above a paper" />
-			<figcaption class="text-center">
-				Photo by <a
-					class="underline decoration-2"
-					target="_blank"
-					href="https://unsplash.com/@medbadrc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-					>Med Badr Chemmaoui</a>
-				on
-				<a
-					target="_blank"
-					class="underline decoration-2"
-					href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-					>Unsplash</a>
-			</figcaption>
-		</figure>
-		<div class="flex items-center md:w-1/2">
-			<p
-				class="lectura first-letter:float-left
-			first-letter:mr-3 first-letter:text-7xl first-letter:font-bold
-			first-letter:text-accent first-line:uppercase first-line:tracking-widest">
-				Questions are my secrete weapon. I always try to identify
-				deeper motivations, gain clarity, challenge assumptions, and
-				demonstrate curiosity and empathy. Like a doctor, I try to
-				stay the most possible time in the diagnosis phase, so I can
-				identify the real problems and give meaningful solutions.
-			</p>
-		</div>
-	</article>
 	<h2 class="mt-36 text-4xl italic text-base-content">
 		Case Studies
 	</h2>

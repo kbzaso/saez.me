@@ -17,7 +17,6 @@
 </script>
 
 <script>
-	import Breadcrums from '../../components/Breadcrums.svelte';
 	import InfoBox from '../../components/InfoBox.svelte';
 	import SvelteSeo from 'svelte-seo';
 	export let project;
@@ -60,8 +59,8 @@
 			],
 		}} />
 </svelte:head>
-<Breadcrums />
-<article class="contenedor mb-8 flex flex-col lg:flex-row">
+
+<article class="contenedor mt-28 mb-8 flex flex-col lg:flex-row">
 	<InfoBox {timeline} {technologies} {deliverables} {myrole} />
 
 	<main class="lectura mx-auto mt-8 max-w-prose">
@@ -69,7 +68,7 @@
 			{name}
 		</h3>
 		<div
-			class="prose-h2:mb-4 prose-h2:italic prose-h2:text-primary prose-h3:text-lg prose-h3:italic prose-h3:text-primary prose-h4:text-primary prose-blockquote:text-secondary">
+			class="prose-h2:mb-4 prose-h2:italic prose-h2:text-primary prose-h3:text-lg prose-h3:italic prose-h3:text-primary prose-h4:text-primary prose-blockquote:text-secondary prose-img:rounded-xl prose-img:shadow-xl">
 			{@html content.html}
 		</div>
 	</main>

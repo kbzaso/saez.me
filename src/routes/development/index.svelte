@@ -51,43 +51,43 @@
 			],
 		}} />
 </svelte:head>
+<article
+	class="mt-28 flex flex-col gap-8 md:flex-row lg:mx-auto 2xl:container">
+	<figure class="md:w-1/2">
+		<img
+			class="mb-2 h-96 w-full rounded-none object-cover shadow-lg lg:rounded-tr-lg lg:rounded-br-lg xl:rounded-none"
+			src={DEV_PHOTO}
+			alt="A pen above a paper" />
+		<figcaption class="text-center">
+			Photo by <a
+				class="underline decoration-2"
+				target="_blank"
+				href="https://unsplash.com/@karlp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+				>Karl Pawlowicz</a>
+			on
+			<a
+				target="_blank"
+				class="underline decoration-2"
+				href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+				>Unsplash</a>
+		</figcaption>
+	</figure>
+	<div class="flex items-center px-20 md:w-1/2">
+		<p
+			class="lectura first-letter:float-left
+	first-letter:mr-3 first-letter:text-7xl first-letter:font-bold
+	first-letter:text-accent first-line:uppercase first-line:tracking-widest">
+			I love to work with HTML, CSS, and JavaScript! But working with
+			some frameworks like Svelte, React, or Vue, make me feel like a
+			¡super human! But I have to say that the simplicity of Svelte
+			takes all my heart. ❤️ <br />
 
+			I always try to make a high-performance development focus on
+			details.
+		</p>
+	</div>
+</article>
 <section class="contenedor mt-32">
-	<article class="mt-8 flex flex-col gap-8 md:flex-row">
-		<figure class="md:w-1/2">
-			<img
-				class="mb-2 h-96 w-full rounded-lg object-cover"
-				src={DEV_PHOTO}
-				alt="A pen above a paper" />
-			<figcaption class="text-center">
-				Photo by <a
-					class="underline decoration-2"
-					target="_blank"
-					href="https://unsplash.com/@karlp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-					>Karl Pawlowicz</a>
-				on
-				<a
-					target="_blank"
-					class="underline decoration-2"
-					href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-					>Unsplash</a>
-			</figcaption>
-		</figure>
-		<div class="flex items-center md:w-1/2">
-			<p
-				class="lectura first-letter:float-left
-		first-letter:mr-3 first-letter:text-7xl first-letter:font-bold
-		first-letter:text-accent first-line:uppercase first-line:tracking-widest">
-				I love to work with HTML, CSS, and JavaScript! But working
-				with some frameworks like Svelte, React, or Vue, make me feel
-				like a ¡super human! But I have to say that the simplicity of
-				Svelte takes all my heart. ❤️ <br />
-
-				I always try to make a high-performance development focus on
-				details.
-			</p>
-		</div>
-	</article>
 	<h2 class="mt-36 text-4xl italic text-base-content">
 		Development projects
 	</h2>
