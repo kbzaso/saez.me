@@ -4,7 +4,7 @@
 </script>
 
 <header
-	class="flex h-screen flex-col items-center justify-end bg-black bg-cover bg-fixed bg-center bg-blend-luminosity"
+	class="flex h-screen flex-col items-center justify-end bg-black bg-cover  bg-center bg-blend-luminosity"
 	style="background-image: url({CITY_PHOTO})">
 	<a href="#about-me">
 		<NextFilled32 class="mb-8 h-12 w-12 rotate-90 fill-white" />

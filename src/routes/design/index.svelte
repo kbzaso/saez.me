@@ -73,7 +73,7 @@
 				>Unsplash</a>
 		</figcaption>
 	</figure>
-	<div class="flex items-center px-20 md:w-1/2">
+	<div class="flex items-center px-4 md:w-1/2 md:px-20">
 		<p
 			class="lectura first-letter:float-left
 		first-letter:mr-3 first-letter:text-7xl first-letter:font-bold

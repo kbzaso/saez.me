@@ -10,7 +10,7 @@
 
 	<!-- sun icon -->
 	<svg
-		class="swap-off h-10 w-10 fill-accent"
+		class="swap-off h-10 w-10 fill-primary"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 		><path
@@ -18,7 +18,7 @@
 
 	<!-- moon icon -->
 	<svg
-		class="swap-on h-10 w-10 fill-neutral"
+		class="swap-on h-10 w-10 fill-primary"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 		><path
