@@ -18,7 +18,7 @@
 	import '../app.css';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
-	import { afterNavigate } from '$app/navigation';
+	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { themeChange } from 'theme-change';
 
 	import PageTransition from '../components/PageTransition.svelte';
@@ -28,10 +28,16 @@
 	// export let pages;
 	let scroll;
 
+	// afterNavigate(() => {
+	// 	document
+	// 		.querySelector('body')
+	// 		.scrollTo({ top: 0, behavior: 'smooth' });
+	// });
+	beforeNavigate(() => {
+		document.documentElement.style.scrollBehavior = 'auto';
+	});
 	afterNavigate(() => {
-		document
-			.querySelector('body')
-			.scrollTo({ top: 0, behavior: 'smooth' });
+		document.documentElement.style.scrollBehavior = '';
 	});
 
 	onMount(() => {
