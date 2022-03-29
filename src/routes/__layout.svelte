@@ -25,14 +25,7 @@
 	import Navbar from '../components/Navbar.svelte';
 	import Footer from '../components/Footer.svelte';
 
-	// export let pages;
 	let mount = false;
-
-	// afterNavigate(() => {
-	// 	document
-	// 		.querySelector('body')
-	// 		.scrollTo({ top: 0, behavior: 'smooth' });
-	// });
 	beforeNavigate(() => {
 		document.documentElement.style.scrollBehavior = 'auto';
 	});
@@ -47,6 +40,7 @@
 </script>
 
 <Navbar />
+
 {#if !mount}
 	<div class="grid h-screen animate-bounce place-items-center">
 		<svg
@@ -67,28 +61,3 @@
 		<Footer />
 	</div>
 {/if}
-
-<style>
-	@keyframes bounce {
-		0% {
-			background-position: 50% calc(50% - 4em), 50% calc(50% + 0.4em);
-			background-size: 2em 2em, 1em 1em;
-		}
-		40% {
-			background-position: 50% 50%, 50% calc(50% + 0.3em);
-			background-size: 2em 2em, 3em 1em;
-		}
-		45% {
-			background-position: 50% 50%, 50% calc(50% + 0.3em);
-			background-size: 2em 1.5em, 3em 1em;
-		}
-		50% {
-			background-position: 50% 50%, 50% calc(50% + 0.3em);
-			background-size: 2em 1em, 3em 1em;
-		}
-		100% {
-			background-position: 50% calc(50% - 4em), 50% calc(50% + 0.3em);
-			background-size: 2em 2em, 1em 1em;
-		}
-	}
-</style>
