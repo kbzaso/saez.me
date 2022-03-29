@@ -24,7 +24,8 @@
 	onMount(() => {
 		mount = true;
 		tl.to('#menu-left', { left: 0, ease: Expo.easeInOut });
-		tl.to('#menu-right', { right: 0, ease: Expo.easeInOut });
+		tl.to('#menu-right', { right: 0, ease: Expo.easeInOut }, '-0');
+
 		tl.from('.menu-link', {
 			y: 100,
 			opacity: 0,
@@ -59,7 +60,7 @@
 </script>
 
 <svelte:window bind:scrollY={scroll} />
-<nav class="fixed top-0 z-10 mx-auto flex w-full ">
+<nav class="fixed top-0 z-20 mx-auto flex w-full ">
 	<div
 		class="w-full p-2 transition {scroll > 30
 			? 'bg-base-200/90 shadow-lg'
@@ -129,26 +130,18 @@
 				href="/"
 				class="decoration-3 text-4xl italic underline hover:text-accent lg:text-6xl"
 				>Home</a>
-			<span class="text-2xl">01</span>
+			<span class="text-2xl text-accent">01</span>
 		</div>
 		<div class="menu-link">
 			<a
 				on:click={closeMenu}
-				href="/design"
+				href="/work"
 				class="decoration-3 text-4xl italic underline hover:text-accent lg:text-6xl"
-				>Design
+				>Work
 			</a>
-			<span class="text-2xl">02</span>
+			<span class="text-2xl text-accent">02</span>
 		</div>
 
-		<div class="menu-link">
-			<a
-				on:click={closeMenu}
-				href="/development"
-				class="decoration-3 text-4xl italic underline hover:text-accent lg:text-6xl"
-				>Development</a>
-			<span class="text-2xl">03</span>
-		</div>
 		<div class="menu-link">
 			<span
 				data-tally-open="wLo013"
@@ -161,12 +154,12 @@
 				class="decoration-3 cursor-pointer text-4xl italic underline hover:text-accent lg:text-6xl">
 				Say Hi!
 			</span>
-			<span class="text-2xl">04</span>
+			<span class="text-2xl text-accent">03</span>
 		</div>
 
 		<div class="menu-link">
 			<span class="text-4xl italic lg:text-6xl">Follow me</span>
-			<span class="text-2xl">05</span>
+			<span class="text-2xl text-accent">04</span>
 		</div>
 		<div class="menu-link ">
 			<SocialIcons />

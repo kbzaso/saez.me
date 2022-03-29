@@ -21,6 +21,23 @@ export const assetQuery = gql`
 	}
 `;
 
+export const allProjectsQuery = gql`
+	query MyProjects {
+		projects() {
+			id
+			name
+			slug
+			image {
+				url
+			}
+			date
+			extract
+			category
+			worktype
+		}
+	}
+`;
+
 export const developmentQuery = gql`
 	query MyDevelopmentProjects {
 		projects(where: { worktype: development }) {

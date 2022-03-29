@@ -6,7 +6,7 @@
 </script>
 
 <aside
-	class="my-8 grid h-fit grid-cols-[repeat(auto-fit,minmax(8rem,1fr))] gap-6 rounded-lg border-2 border-neutral p-4 shadow-sm transition prose-h4:text-primary">
+	class="mb-8 grid h-fit grid-cols-[repeat(auto-fit,minmax(8rem,1fr))] gap-6 rounded-lg border-2 border-neutral p-4 shadow-sm transition prose-h4:text-primary">
 	<div class="h-fit">
 		<h4 class="uppercase tracking-widest">Timeline</h4>
 		<p>{timeline}</p>
