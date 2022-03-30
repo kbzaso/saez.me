@@ -5,17 +5,15 @@
 	export let extract = '';
 	export let category;
 	import { marked } from 'marked';
-	import { onMount } from 'svelte';
+
 	let hover = false;
 
 	let extractDiv;
 	let nameDiv;
 	let categoryDiv;
 	let backgroundDiv;
-	onMount(() => {});
 	function Hover() {
 		hover = true;
-		console.log(extractDiv);
 		extractDiv.classList.replace(
 			'lg:translate-y-48',
 			'lg:translate-y-0'
@@ -35,7 +33,6 @@
 	}
 
 	function Exit() {
-		console.log('exit');
 		extractDiv.classList.replace(
 			'lg:translate-y-0',
 			'lg:translate-y-48'

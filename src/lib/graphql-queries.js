@@ -55,9 +55,9 @@ export const developmentQuery = gql`
 	}
 `;
 
-export const designQuery = gql`
-	query MyDesignProjects {
-		projects(where: { worktype: design }) {
+export const brandingQuery = gql`
+	query MyBrandingProjects {
+		projects(where: { worktype: branding }) {
 			id
 			name
 			slug

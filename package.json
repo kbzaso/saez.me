@@ -42,7 +42,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"gsap": "^3.9.1",
-		"svelte-headroom": "^2.2.1"
+		"gsap": "^3.9.1"
 	}
 }
