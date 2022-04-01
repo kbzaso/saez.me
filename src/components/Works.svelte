@@ -10,7 +10,6 @@
 
 	let extractDiv;
 	let nameDiv;
-	let categoryDiv;
 	let backgroundDiv;
 	function Hover() {
 		hover = true;
@@ -22,10 +21,7 @@
 			'lg:-translate-x-[32rem]',
 			'lg:translate-y-0'
 		);
-		categoryDiv.classList.replace(
-			'lg:-translate-x-24',
-			'lg:translate-x-0'
-		);
+
 		backgroundDiv.classList.replace(
 			'lg:translate-y-96',
 			'lg:translate-y-0'
@@ -41,10 +37,7 @@
 			'lg:translate-y-0',
 			'lg:-translate-x-[32rem]'
 		);
-		categoryDiv.classList.replace(
-			'lg:translate-x-0',
-			'lg:-translate-x-24'
-		);
+
 		backgroundDiv.classList.replace(
 			'lg:translate-y-0',
 			'lg:translate-y-96'
@@ -56,19 +49,20 @@
 	<div
 		on:mouseenter={Hover}
 		on:mouseleave={Exit}
-		class="space-between relative flex h-96 w-full flex-col justify-end overflow-hidden rounded-lg bg-cover bg-center shadow-xl transition-all lg:hover:scale-105"
+		class="space-between relative flex h-96 w-full flex-col justify-end overflow-hidden  bg-cover bg-center shadow-xl transition-all lg:hover:scale-105"
 		style="background-image: url({image[0].url});">
 		<h3
 			bind:this={nameDiv}
 			class="absolute bottom-4 z-10 order-2 ml-4 pb-1 text-left text-3xl italic text-accent transition duration-300 ease-in-out line-clamp-2 lg:bottom-20 lg:-translate-x-[32rem] lg:text-4xl">
 			{name}
 		</h3>
-		<div
-			bind:this={categoryDiv}
-			class="badge badge-secondary absolute right-4 top-4 z-10 order-1">
-			{category}
+		<div class="order-1 mr-4 mt-4 flex flex-1 gap-4 self-end">
+			{#each category as cat}
+				<div class="badge badge-accent capitalize">
+					{cat}
+				</div>
+			{/each}
 		</div>
-
 		<p
 			bind:this={extractDiv}
 			class="absolute z-10 order-3 mx-4 mb-4 hidden text-lg text-white transition duration-300 ease-in-out lg:translate-y-48 lg:line-clamp-2">

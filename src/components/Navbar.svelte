@@ -62,7 +62,7 @@
 <svelte:window bind:scrollY={scroll} />
 <nav class="fixed top-0 z-20 mx-auto flex w-full ">
 	<div
-		class="w-full p-2 transition {scroll > 30
+		class="w-full p-2 transition {scroll > 100
 			? 'bg-base-200/90 shadow-lg'
 			: 'bg-transparent'} {mount ? 'flex' : 'invisible'}">
 		<!-- LOGO -->
@@ -161,7 +161,7 @@
 			<span class="text-4xl italic lg:text-6xl">Follow me</span>
 			<span class="text-2xl text-accent">04</span>
 		</div>
-		<div class="menu-link ">
+		<div class="menu-link">
 			<SocialIcons />
 		</div>
 
