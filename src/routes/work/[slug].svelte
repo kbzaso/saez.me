@@ -38,9 +38,7 @@
 	} = project;
 	let scroll;
 
-	let imageApplications = image.slice(2, 4);
-	console.log(imageApplications);
-	console.log(image);
+	let imageApplications = image.slice(2, 5);
 </script>
 
 <svelte:head>
